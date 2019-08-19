@@ -1,0 +1,22 @@
+body {
+	background: url('/img/splashscreenImage.jpg') no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+.enterance-button-container {
+  position: absolute;
+  top: 90%;
+  left: 45%;
+  transform: translate(-50%, -50%);
+}
+
+.enterance-button-container a,
+.enterance-button-container a:active,
+.enterance-button-container a:visited,
+.enterance-button-container a:link {
+	color: #FCFCFC;
+	font-size: 2em;
+}

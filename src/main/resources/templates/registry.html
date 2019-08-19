@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorator="layouts/default">
+	<head>
+		<link media="all" rel="stylesheet" th:href="@{/css/registry.css}" />
+	</head>
+	<div layout:fragment="content" th:inline="text">
+		<div class="row m-5">
+			<div class="col-12">
+				<div class="card-deck mx-auto">
+					<div class="card mx-auto">
+						<img th:src="@{/img/registry/amazon-scaled.png}" class="card-img-top p-5" alt="Amazon">
+						<div class="card-body">
+							<a href="https://www.amazon.com/wedding/registry/XFNL8K4QYPCE?ref=wr_search_page_result_1" target="_blank" class="btn btn-primary">Shop Registry</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorator="layouts/default">
+	<head>
+		<title>Admin Home</title>
+	</head>
+	<div layout:fragment="content" th:inline="text">
+	     <!--/* displayed if account IS NOT null, indicating that the user IS logged in */-->
+	     <div th:if="${#authorization.expression('isAuthenticated()')}">
+		    <div class="row">
+		        <div class="col-12">
+	                <a th:href="@{/admin/guest-list}">RSVP List</a>
+	                <br />
+	                <a th:href="@{/admin/guestbook}">Guestbook</a>
+		        </div>
+		    </div>
+	    </div>
+	</div>
+</html>

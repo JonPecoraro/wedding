@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html  xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorator="layouts/default">
+	<head>
+		<link media="all" rel="stylesheet" th:href="@{/webjars/jquery-ui/1.12.1/jquery-ui.min.css}" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.css">
+		<link media="all" rel="stylesheet" th:href="@{/css/extras.css}" />
+	</head>
+	<section layout:fragment="additionalScripts">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.js"></script>
+		<script th:src="@{/js/extras.js}"></script>
+	</section>
+	<div layout:fragment="content" th:inline="text">
+		<section id="accommodations">
+			<div class="row">
+				<div class="col-12">
+					<h1>Accommodations</h1>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-12">
+					<div class="card">
+						<div class="card-body text-left">
+							<h3 class="card-title">Caribe Royale</h3>
+							<hr />
+							<img th:src="@{/img/accomodations/caribe-royale.jpg}" class="card-img-top" alt="Caribe Royale">
+							<p class="card-text mt-3">
+								Staying at Caribe Royale is a great option because it is the location of the reception.
+								The all-suite resort offers residential-style accommodations, including villas.
+								They also offer a number of onsite amenities as well. Lounge by the resort-style pool, break a sweat in the fitness center or treat yourself to a "me day" at the boutique spa.
+								If you're feeling hungry, there are plenty of options. Dine at one of their six delicious onsite bars and restaurants.
+							</p>
+							<ul class="list-group">
+								<li class="list-group-item"><strong>Address:</strong> <a href="https://goo.gl/maps/YUowp7vJ9XnW4Ybq9" target="_blank">8101 World Center Drive, Orlando, Florida, 32821</a></li>
+								<li class="list-group-item"><strong>Phone:</strong> <a href="tel:(800)823-8300">(800) 823-8300</a></li>
+								<li class="list-group-item"><strong>Room Block:</strong> <a href="https://cariberoyale.reztrip.com/ext/promoRate?property=1515&mode=b&pm=true&sr=475945&vr=3" target="_blank">Reserve a room</a></li>
+								<li class="list-group-item">
+									<strong>Room block rates</strong>
+									<ul class="list-group">
+										<li class="list-group-item">Queen Double: $169.00</li>
+										<li class="list-group-item">Standard King: $169.00</li>
+										<li class="list-group-item">King Deluxe: $189.00</li>
+										<li class="list-group-item">Villa: $344.00</li>
+									</ul>
+									<p>All suite rates are based on single/double occupancy. Villa rates are based on up to four adults (18 and over). Additional adults are $15.00 each per night.</p>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="card mt-4">
+						<div class="card-body text-left">
+							<h3 class="card-title">Buena Vista Suites</h3>
+							<hr />
+							<img th:src="@{/img/accomodations/buena-vista-suites.jpg}" class="card-img-top" alt="Buena Vista Suites">
+							<p class="card-text mt-3">
+								Staying at Buena Vista Suites is another great option because it is in the same parking lot as the reception venue (Caribe Royale), but it is a less expensive option.
+								With Buena Vista Suites, a complimentary breakfast is included when you book your room.
+								bask in the Florida sunshine at their palm tree-shaded pool, hit the sport courts for a game of tennis or pick-up basketball, and dine on Italian favorites and pizza on the go.
+							</p>
+							<ul class="list-group">
+								<li class="list-group-item"><strong>Address:</strong> <a href="https://goo.gl/maps/faUWTz58zdZq1DCY9" target="_blank">8203 World Center Drive, Orlando FL 32821</a></li>
+								<li class="list-group-item"><strong>Phone:</strong> <a href="tel:(800)537-7737">(800) 537-7737</a></li>
+								<li class="list-group-item"><strong>Room Block:</strong> <a href="https://buenavistasuites.reztrip.com/ext/promoRate?property=1516&mode=b&pm=true&sr=475909&vr=3" target="_blank">Reserve a room</a></li>
+								<li class="list-group-item"><strong>Room block rate:</strong> $139 plus $8.50 resort fee</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="things-to-do">
+			<div class="row">
+				<div class="col-12">
+					<h1>Things to do Around Orlando</h1>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-12">
+					<div class="card">
+						<div class="card-body">
+							<div class="accordion" id="things-to-do-accordion">
+								<!-- 50 Things to do Website  -->
+								<div class="card">
+									<div class="card-header text-left" id="external-website-header">
+										<h2 class="mb-0">
+											<button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#external-website-collapse" aria-expanded="false" aria-controls="external-website-collapse">
+												50 things to do around Orlando website 
+											</button>
+										</h2>
+									</div>
+									<div id="external-website-collapse" class="collapse" aria-labelledby="external-website-header" data-parent="#things-to-do-accordion">
+										<div class="card-body text-left">
+											<p>
+												This website has 50 great things to do around Orland that aren't theme parks.
+												<br />
+												<a href="https://www.westgatereservations.com/blog/50-things-to-do-in-orlando" target="_blank">https://www.westgatereservations.com/blog/50-things-to-do-in-orlando</a>
+											</p>
+										</div>
+									</div>
+								</div>
+								<!-- Disney  -->
+								<div class="card">
+									<div class="card-header text-left" id="disney-header">
+										<h2 class="mb-0">
+											<button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#disney-collapse" aria-expanded="false" aria-controls="disney-collapse">
+												Disney World
+											</button>
+										</h2>
+									</div>
+									<div id="disney-collapse" class="collapse" aria-labelledby="disney-header" data-parent="#things-to-do-accordion">
+										<div class="card-body text-left">
+											<img th:src="@{/img/things-to-do/disney-world.png}" class="rounded img-thumbnail" alt="Cinderella's Castle at Magic Kingdom" />
+											<p class="pt-3">
+												<a href="https://disneyworld.disney.go.com" target="_blank">Disney World</a> offers 4 theme parks and 2 water parks. In addition to the parks Disney Springs is an outdoor shopping, dining, and entertainment complex
+												with a lot to do for both adults and kids.
+											</p>
+											<ul>
+												<li>
+													<a href="https://goo.gl/maps/3x9PVaQV3MjBiiL5A" target="_blank">Directions to Disney Springs from Caribe Royale</a><br />
+													<iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d14042.565750382417!2d-81.52338981274809!3d28.36968817035423!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0x88dd81b583f711ad%3A0x2be53ca965d506a!2sCaribe+Royale+Orlando%2C+World+Center+Drive%2C+Orlando%2C+FL!3m2!1d28.3596813!2d-81.4934196!4m5!1s0x88dd7f879606dfbf%3A0x8652c45e7d093ac!2sDisney+Springs%2C+Lake+Buena+Vista%2C+FL!3m2!1d28.3703464!2d-81.5208799!5e0!3m2!1sen!2sus!4v1564144011779!5m2!1sen!2sus" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+												</li>
+												<li>
+													<a href="https://goo.gl/maps/KPz3MmLyFxgHrrYQA" target="_blank">Directions to Magic Kingdom from Caribe Royale</a><br />
+													<iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d56164.108181879245!2d-81.57266579175521!3d28.381311874377086!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0x88dd81b583f711ad%3A0x2be53ca965d506a!2sCaribe+Royale+Orlando%2C+World+Center+Drive%2C+Orlando%2C+FL!3m2!1d28.3596813!2d-81.4934196!4m5!1s0x88dd7e536aa54b81%3A0x66b8bcd58da841a!2sMagic+Kingdom%2C+Seven+Seas+Dr%2C+Lake+Buena+Vista%2C+FL!3m2!1d28.417662999999997!2d-81.581212!5e0!3m2!1sen!2sus!4v1564143518536!5m2!1sen!2sus" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+												</li>
+												<li>
+													<a href="https://goo.gl/maps/DWoGUPp5jgSFkkncA" target="_blank">Directions to Epcot from Caribe Royale</a><br />
+													<iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d28084.87598907549!2d-81.5443270905869!3d28.3706534313839!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0x88dd81b583f711ad%3A0x2be53ca965d506a!2sCaribe+Royale+Orlando%2C+World+Center+Drive%2C+Orlando%2C+FL!3m2!1d28.3596813!2d-81.4934196!4m5!1s0x88dd7fafde6c311b%3A0xea245263cb7597bd!2sEpcot%2C+Epcot+Center+Drive%2C+Orlando%2C+FL!3m2!1d28.374693999999998!2d-81.549404!5e0!3m2!1sen!2sus!4v1564143747434!5m2!1sen!2sus" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+												</li>
+												<li>
+													<a href="https://goo.gl/maps/uaW4r7VZGaFn8ffL8" target="_blank">Directions to Hollywood Studios from Caribe Royale</a><br />
+													<iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d28088.166247415815!2d-81.53843274060229!3d28.35822133170237!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0x88dd81b583f711ad%3A0x2be53ca965d506a!2sCaribe+Royale+Orlando%2C+World+Center+Drive%2C+Orlando%2C+FL!3m2!1d28.3596813!2d-81.4934196!4m5!1s0x88dd7c2763821e47%3A0xbbffcea336e3f10f!2sDisney&#39;s+Hollywood+Studios%2C+South+Studio+Drive%2C+Lake+Buena+Vista%2C+FL!3m2!1d28.357529399999997!2d-81.5582714!5e0!3m2!1sen!2sus!4v1564143841571!5m2!1sen!2sus" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+												</li>
+												<li>
+													<a href="https://goo.gl/maps/xP9ng2NfWpSiaJah9" target="_blank">Directions to Animal Kingdom from Caribe Royale</a><br />
+													<iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d28088.166247415815!2d-81.55495354060226!3d28.35822133170237!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0x88dd81b583f711ad%3A0x2be53ca965d506a!2sCaribe+Royale+Orlando%2C+World+Center+Drive%2C+Orlando%2C+FL!3m2!1d28.3596813!2d-81.4934196!4m5!1s0x88dd81a33dfde1fd%3A0x3438044622233fbb!2sAnimal+Kingdom%2C+Osceola+Parkway%2C+Orlando%2C+FL!3m2!1d28.359719!2d-81.591313!5e0!3m2!1sen!2sus!4v1564143927718!5m2!1sen!2sus" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<!-- The Void  -->
+								<div class="card">
+									<div class="card-header text-left" id="void-header">
+										<h2 class="mb-0">
+											<button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#void-collapse" aria-expanded="false" aria-controls="void-collapse">
+												The Void
+											</button>
+										</h2>
+									</div>
+									<div id="void-collapse" class="collapse" aria-labelledby="void-header" data-parent="#things-to-do-accordion">
+										<div class="card-body text-left">
+											<img th:src="@{/img/things-to-do/the-void.jpg}" class="rounded img-thumbnail" alt="The VOID at Disney Springs" />
+											<p class="pt-3">
+												<a href="https://www.thevoid.com" target="_blank">The VOID</a> is a virtual reality (VR) experience at Disney Springs. It's free to park and get into Disney Springs, but
+												the experience costs money. There are two experiences available at the VOID; Star Wars and Ralph Breaks VR. The VOID allows you to travel into your favorite film, be
+												your favorite character, and experience the impossible. Guests are encouraged to explore their physical surroundings while interacting with a dynamic, virtual world.
+												You don't just experience The VOID, you're in it.
+											</p>
+											<a href="https://goo.gl/maps/3x9PVaQV3MjBiiL5A" target="_blank">Directions to Disney Springs from Caribe Royale</a><br />
+											<iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d14042.565750382417!2d-81.52338981274809!3d28.36968817035423!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0x88dd81b583f711ad%3A0x2be53ca965d506a!2sCaribe+Royale+Orlando%2C+World+Center+Drive%2C+Orlando%2C+FL!3m2!1d28.3596813!2d-81.4934196!4m5!1s0x88dd7f879606dfbf%3A0x8652c45e7d093ac!2sDisney+Springs%2C+Lake+Buena+Vista%2C+FL!3m2!1d28.3703464!2d-81.5208799!5e0!3m2!1sen!2sus!4v1564144011779!5m2!1sen!2sus" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+										</div>
+									</div>
+								</div>
+								<!-- Hoop Dee Doo  -->
+								<div class="card">
+									<div class="card-header text-left" id="hoop-dee-doo-header">
+										<h2 class="mb-0">
+											<button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#hoop-dee-doo-collapse" aria-expanded="false" aria-controls="hoop-dee-doo-collapse">
+												Hoop-Dee-Doo Musical Revue
+											</button>
+										</h2>
+									</div>
+									<div id="hoop-dee-doo-collapse" class="collapse" aria-labelledby="hoop-dee-doo-header" data-parent="#things-to-do-accordion">
+										<div class="card-body text-left">
+											<img th:src="@{/img/things-to-do/hoop-dee-doo.jpg}" class="rounded img-thumbnail" alt="Hoop Dee Doo" />
+											<p class="pt-3">
+												<a href="https://disneyworld.disney.go.com/dining/cabins-at-fort-wilderness-resort/hoop-dee-doo-musical-revue" target="_blank">Hoop-Dee-Doo Musical Revue</a>
+												is a family friendly dinner show attraction in Disney's Fort Wilderness Resort. It's described as a hilarious, high-spirited hootenanny the whole family will enjoy,
+												accompanied by a finger-lickin' countrified feast. 
+											</p>
+											<a href="https://goo.gl/maps/yma6zsuJsNEweoJv8" target="_blank">Directions to Hoop-Dee-Doo from Caribe Royale</a><br />
+											<iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d28080.605740848918!2d-81.55806438969967!3d28.38678093638024!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0x88dd81b583f711ad%3A0x2be53ca965d506a!2sCaribe+Royale+Orlando%2C+World+Center+Drive%2C+Orlando%2C+FL!3m2!1d28.3596813!2d-81.4934196!4m5!1s0x88dd7fac64550217%3A0x6f60cea7f6f9911f!2shoop+dee+doo!3m2!1d28.411547!2d-81.56175259999999!5e0!3m2!1sen!2sus!4v1564749033395!5m2!1sen!2sus" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+										</div>
+									</div>
+								</div>
+								<!-- Universal  -->
+								<div class="card">
+									<div class="card-header text-left" id="universal-header">
+										<h2 class="mb-0">
+											<button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#universal-collapse" aria-expanded="false" aria-controls="universal-collapse">
+												Universal and Islands of Adventure
+											</button>
+										</h2>
+									</div>
+									<div id="universal-collapse" class="collapse" aria-labelledby="universal-header" data-parent="#things-to-do-accordion">
+										<div class="card-body text-left">
+											<img th:src="@{/img/things-to-do/universal.jpg}" class="rounded img-thumbnail" alt="Universal Studios" />
+											<p class="pt-3">
+												<a href="https://www.universalorlando.com/web/en/us" target="_blank">Universal Studios and Islands of adventure</a> are two theme parks that are right next to each
+												other in the heart of Orlando. They both feature a number of rides, roller coasters, and shows. They both feature a section of The Wizarding World of Harry Potter.
+												Islands of Adventure houses Hogsmeade, which has multiple rides, stores, and themed restaurants, while Universal houses Diagon Alley. Just like in the book, if you
+												don't keep your eye out for Diagon Ally, you could miss it. Although the two lands are in separate parks, you can get from one to the other by using the Hogwarts
+												Express; a train ride that travels exclusively between the two Harry Potter sections of the park.
+											</p>
+											<p>
+												In addition to the two parks, you can visit Citywalk. This is an area similar to Disney Springs in that there's shopping, movies, restaurants, bars, etc...
+												Citywalk is the connection between the two parks.
+											</p>
+											<a href="https://goo.gl/maps/nDscdsjpcB3XyytT7" target="_blank">Directions to Universal from Caribe Royale</a><br />
+											<iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d56145.62525527151!2d-81.51506078814305!3d28.416191661234663!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0x88dd81b583f711ad%3A0x2be53ca965d506a!2sCaribe+Royale+Orlando%2C+World+Center+Drive%2C+Orlando%2C+FL!3m2!1d28.3596813!2d-81.4934196!4m5!1s0x88e77ec39415df75%3A0xf985d8fc7734a5a1!2sUniversal+Studios+Florida%2C+6000+Universal+Blvd%2C+Orlando%2C+FL+32819!3m2!1d28.4749636!2d-81.46683569999999!5e0!3m2!1sen!2sus!4v1564750114672!5m2!1sen!2sus" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+										</div>
+									</div>
+								</div>
+								<!-- Seaworld  -->
+								<div class="card">
+									<div class="card-header text-left" id="seaworld-header">
+										<h2 class="mb-0">
+											<button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#seaworld-collapse" aria-expanded="false" aria-controls="seaworld-collapse">
+												Seaworld
+											</button>
+										</h2>
+									</div>
+									<div id="seaworld-collapse" class="collapse" aria-labelledby="seaworld-header" data-parent="#things-to-do-accordion">
+										<div class="card-body text-left">
+											<img th:src="@{/img/things-to-do/seaworld.jpg}" class="rounded img-thumbnail" alt="Seaworld" />
+											<p class="pt-3">
+												<a href="https://seaworld.com/orlando" target="_blank">Seaworld</a> is another one of Orlando's unique theme parks. They offer a number of exciting roller
+												coasters and shows along with an unmatched display of marine life. The famous Shamu show is a must see at where the killer whale shows off it's moves in a 
+												theatrical show. Watch out for a big wave of water coming your way if you're in the splash zone!
+											</p>
+											<a href="https://goo.gl/maps/gs94LwsN8sSSvYhr5" target="_blank">Directions to Seaworld from Caribe Royale</a><br />
+											<iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d56145.62525527151!2d-81.51506078814305!3d28.416191661234663!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0x88dd81b583f711ad%3A0x2be53ca965d506a!2sCaribe+Royale+Orlando%2C+World+Center+Drive%2C+Orlando%2C+FL!3m2!1d28.3596813!2d-81.4934196!4m5!1s0x88e77e288cd6237f%3A0x997f9e39a3d62bd5!2sSeaWorld+Orlando%2C+Sea+World+Drive%2C+Orlando%2C+FL!3m2!1d28.4114555!2d-81.4617047!5e0!3m2!1sen!2sus!4v1564753819654!5m2!1sen!2sus" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+										</div>
+									</div>
+								</div>
+								<!-- Discovery Cove  -->
+								<div class="card">
+									<div class="card-header text-left" id="discovery-cove-header">
+										<h2 class="mb-0">
+											<button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#discovery-cove-collapse" aria-expanded="false" aria-controls="discovery-cove-collapse">
+												Discovery Cove
+											</button>
+										</h2>
+									</div>
+									<div id="discovery-cove-collapse" class="collapse" aria-labelledby="discovery-cove-header" data-parent="#things-to-do-accordion">
+										<div class="card-body text-left">
+											<img th:src="@{/img/things-to-do/discovery-cove.jpg}" class="rounded img-thumbnail" alt="Discovery Cove" />
+											<p class="pt-3">
+												<a href="https://discoverycove.com/orlando" target="_blank">Discovery Cove</a> is the sister theme park to Seaworld. It is the only theme park that allows it's
+												guests to swim with the dolphins. Discovery cove is an exclusive park. Admission is limited to keep the crowds down, but you are sure to have a blast with the
+												personalized experience they provide.
+											</p>
+											<a href="https://goo.gl/maps/7oDRgSFvpzYUEpop" target="_blank">Directions to Discovery Cove from Caribe Royale</a><br />
+											<iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d56145.62525527151!2d-81.51506078814305!3d28.416191661234663!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0x88dd81b583f711ad%3A0x2be53ca965d506a!2sCaribe+Royale+Orlando%2C+World+Center+Drive%2C+Orlando%2C+FL!3m2!1d28.3596813!2d-81.4934196!4m5!1s0x88dd808282ae7033%3A0x2d3e5e4b2a765c57!2sDiscovery+Cove%2C+Discovery+Cove+Way%2C+Orlando%2C+FL!3m2!1d28.405397999999998!2d-81.46168779999999!5e0!3m2!1sen!2sus!4v1564753875355!5m2!1sen!2sus" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+										</div>
+									</div>
+								</div>
+								<!-- Winter Park Boat Tour  -->
+								<div class="card">
+									<div class="card-header text-left" id="winter-park-boat-tour-header">
+										<h2 class="mb-0">
+											<button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#winter-park-boat-tour-collapse" aria-expanded="false" aria-controls="winter-park-boat-tour-collapse">
+												Winter Park Boat Tour
+											</button>
+										</h2>
+									</div>
+									<div id="winter-park-boat-tour-collapse" class="collapse" aria-labelledby="winter-park-boat-tour-header" data-parent="#things-to-do-accordion">
+										<div class="card-body text-left">
+											<img th:src="@{/img/things-to-do/winter-park-boat-tour.jpg}" class="rounded img-thumbnail" alt="Winter Park Boat Tour" />
+											<p class="pt-3">
+												<a href="https://www.scenicboattours.com" target="_blank">The Winter Park boat tour</a> is a scenic boat tour around the lakes of Winter Park. Ashley and Jon
+												recently purchased a house in Winter Park where they plan to live after they're married. If you want to check out their hometown, drop by for the peaceful
+												boat tour around Winter Park. Afterward, take a stroll down Park Ave and try one of the many classy restaurant options.
+											</p>
+											<a href="https://goo.gl/maps/diArf7j8NiJk3cep6" target="_blank">Directions to the Winter Park boat tour from Caribe Royale</a><br />
+											<iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d56145.62525527151!2d-81.51506078814305!3d28.416191661234663!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0x88dd81b583f711ad%3A0x2be53ca965d506a!2sCaribe+Royale+Orlando%2C+World+Center+Drive%2C+Orlando%2C+FL!3m2!1d28.3596813!2d-81.4934196!4m5!1s0x88e7701ba02379e1%3A0xcf6cafd5c6852a1a!2sScenic+Boat+Tour%2C+East+Morse+Boulevard%2C+Winter+Park%2C+FL!3m2!1d28.597842!2d-81.34684999999999!5e0!3m2!1sen!2sus!4v1564753958955!5m2!1sen!2sus" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+										</div>
+									</div>
+								</div>
+								<!-- Daytona Beach  -->
+								<div class="card">
+									<div class="card-header text-left" id="daytona-beach-header">
+										<h2 class="mb-0">
+											<button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#daytona-beach-collapse" aria-expanded="false" aria-controls="daytona-beach-collapse">
+												Daytona Beach
+											</button>
+										</h2>
+									</div>
+									<div id="daytona-beach-collapse" class="collapse" aria-labelledby="daytona-beach-header" data-parent="#things-to-do-accordion">
+										<div class="card-body text-left">
+											<img th:src="@{/img/things-to-do/daytona-beach.jpg}" class="rounded img-thumbnail" alt="Daytona Beach" />
+											<p class="pt-3">
+												<a href="https://www.daytonabeach.com" target="_blank">Daytona Beach</a> is where Jonathan grew up. It was once known as the world's most famous beach.
+												Daytona is one of the only beaches you can drive your car on. It's a little drive from the resort, but it's well worth the trip. If you want to get a feel
+												for where Jonathan got his roots, take a trip to Daytona Beach and soak in the warm sun.
+											</p>
+											<a href="https://goo.gl/maps/19HMzZm2JmHoYDfC9" target="_blank">Directions to Daytona Beach from Caribe Royale</a><br />
+											<iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d56145.62525527151!2d-81.51506078814305!3d28.416191661234663!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0x88dd81b583f711ad%3A0x2be53ca965d506a!2sCaribe+Royale+Orlando%2C+World+Center+Drive%2C+Orlando%2C+FL!3m2!1d28.3596813!2d-81.4934196!4m5!1s0x88e6db9425025683%3A0x366a3bb71dcb2aeb!2sDaytona+Beach%2C+FL!3m2!1d29.2108147!2d-81.0228331!5e0!3m2!1sen!2sus!4v1564753998091!5m2!1sen!2sus" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+										</div>
+									</div>
+								</div>
+								<!-- Cocoa Beach  -->
+								<div class="card">
+									<div class="card-header text-left" id="cocoa-beach-header">
+										<h2 class="mb-0">
+											<button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#cocoa-beach-collapse" aria-expanded="false" aria-controls="cocoa-beach-collapse">
+												Cocoa Beach
+											</button>
+										</h2>
+									</div>
+									<div id="cocoa-beach-collapse" class="collapse" aria-labelledby="cocoa-beach-header" data-parent="#things-to-do-accordion">
+										<div class="card-body text-left">
+											<img th:src="@{/img/things-to-do/cocoa-beach.jpg}" class="rounded img-thumbnail" alt="Cocoa Beach" />
+											<p class="pt-3">
+												<a href="http://www.cocoabeach.com" target="_blank">Cocoa Beach</a> is a closer beach option than Daytona. It puts you next to the famous Port Canaveral
+												where cruise ships come and go. It's also a great stop along the way to Kennedy Space Center where you can take a tour and see some space shuttles.
+											</p>
+											<a href="https://goo.gl/maps/XfYXDjzTfgfCzXsCA" target="_blank">Directions to Cocoa Beach from Caribe Royale</a><br />
+											<iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d336498.2113555284!2d-81.22140859692051!3d28.55275993271796!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0x88dd81b583f711ad%3A0x2be53ca965d506a!2sCaribe+Royale+Orlando%2C+World+Center+Drive%2C+Orlando%2C+FL!3m2!1d28.3596813!2d-81.4934196!4m5!1s0x88de1cc253486439%3A0xa5d8170cdab472c6!2sCocoa+Beach%2C+FL!3m2!1d28.3200067!2d-80.6075513!5e0!3m2!1sen!2sus!4v1564754058573!5m2!1sen!2sus" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+										</div>
+									</div>
+								</div>
+								<!-- Ponce Inlet Lighthouse  -->
+								<div class="card">
+									<div class="card-header text-left" id="ponce-inlet-lighthouse-header">
+										<h2 class="mb-0">
+											<button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#ponce-inlet-lighthouse-collapse" aria-expanded="false" aria-controls="ponce-inlet-lighthouse-collapse">
+												Ponce Inlet Lighthouse
+											</button>
+										</h2>
+									</div>
+									<div id="ponce-inlet-lighthouse-collapse" class="collapse" aria-labelledby="ponce-inlet-lighthouse-header" data-parent="#things-to-do-accordion">
+										<div class="card-body text-left">
+											<img th:src="@{/img/things-to-do/ponce-inlet-lighthouse.jpg}" class="rounded img-thumbnail" alt="Ponce Inlet Lighthouse" />
+											<p class="pt-3">
+												<a href="https://ponceinlet.org" target="_blank">Ponce Inlet Lighthouse</a> is the tallest lighthouse in the state and one of the tallest in the United States.
+												The lighthouse became a National Historic Landmark in 1998. Again, it's a bit of a drive from the resort, but it's a sight you don't get to see very often.
+												While in Ponce Inlet, check out the disappearing island along with the local cuisine.
+											</p>
+											<a href="https://goo.gl/maps/ohUozgwGfAGrX8GK7" target="_blank">Directions to Ponce Inlet Lighthouse from Caribe Royale</a><br />
+											<iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d336498.2113555284!2d-81.22140859692051!3d28.55275993271796!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0x88dd81b583f711ad%3A0x2be53ca965d506a!2sCaribe+Royale+Orlando%2C+World+Center+Drive%2C+Orlando%2C+FL!3m2!1d28.3596813!2d-81.4934196!4m5!1s0x88e729bbcb4b65c3%3A0xa60da69918bba613!2sPonce+Inlet+Lighthouse%2C+South+Peninsula+Drive%2C+Ponce+Inlet%2C+FL!3m2!1d29.080633799999998!2d-80.9280234!5e0!3m2!1sen!2sus!4v1564754102698!5m2!1sen!2sus" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+										</div>
+									</div>
+								</div>
+								<!-- Orlando City Soccer  -->
+								<div class="card">
+									<div class="card-header text-left" id="orlando-city-soccer-header">
+										<h2 class="mb-0">
+											<button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#orlando-city-soccer-collapse" aria-expanded="false" aria-controls="orlando-city-soccer-collapse">
+												Orlando City Soccer
+											</button>
+										</h2>
+									</div>
+									<div id="orlando-city-soccer-collapse" class="collapse" aria-labelledby="orlando-city-soccer-header" data-parent="#things-to-do-accordion">
+										<div class="card-body text-left">
+											<img th:src="@{/img/things-to-do/orlando-city-soccer.jpg}" class="rounded img-thumbnail" alt="Orlando City Soccer" />
+											<p class="pt-3">
+												<a href="https://www.orlandocitysc.com" target="_blank">Orlando City Soccer</a> is Orlando's MLS soccer team. Come catch a game while your in town if
+												sporting events is what you're into. Ashley and Jonathan enjoyed a nice Orlando City game for their second date. It truly was a day to remember.
+											</p>
+											<a href="https://goo.gl/maps/XLbQGrHrvJGqT2Kt7" target="_blank">Directions to Orlando City Soccer stadium from Caribe Royale</a><br />
+											<iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d336498.2113555284!2d-81.22140859692051!3d28.55275993271796!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0x88dd81b583f711ad%3A0x2be53ca965d506a!2sCaribe+Royale+Orlando%2C+World+Center+Drive%2C+Orlando%2C+FL!3m2!1d28.3596813!2d-81.4934196!4m5!1s0x88e77a54982df52d%3A0xcf5f870d3178c1a8!2sOrlando+City+Stadium%2C+West+Church+Street%2C+Orlando%2C+FL!3m2!1d28.5411106!2d-81.38927819999999!5e0!3m2!1sen!2sus!4v1564754147345!5m2!1sen!2sus" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+										</div>
+									</div>
+								</div>
+								<!-- Holy Land Experience  -->
+								<div class="card">
+									<div class="card-header text-left" id="holy-land-experience-header">
+										<h2 class="mb-0">
+											<button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#holy-land-experience-collapse" aria-expanded="false" aria-controls="holy-land-experience-collapse">
+												Holy Land Experience
+											</button>
+										</h2>
+									</div>
+									<div id="holy-land-experience-collapse" class="collapse" aria-labelledby="holy-land-experience-header" data-parent="#things-to-do-accordion">
+										<div class="card-body text-left">
+											<img th:src="@{/img/things-to-do/holy-land-experience.jpg}" class="rounded img-thumbnail" alt="Holy Land Experience" />
+											<p class="pt-3">
+												<a href="https://holylandexperience.com" target="_blank">Holy Land Experience</a> is a different kind of theme park. It is registered as a Christian-based
+												theme park a non-profit corporation. The theme park conducts weekly church services and bible studies for the general public. They recreate the architecture
+												and themes of the ancient city of Jerusalem in 1st-century Judea. Come get a taste of this unique theme park experience.
+											</p>
+											<a href="https://goo.gl/maps/gNNTfXipGAAMUuZM6" target="_blank">Directions to Holy Land Experience from Caribe Royale</a><br />
+											<iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d336498.2113555284!2d-81.22140859692051!3d28.55275993271796!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0x88dd81b583f711ad%3A0x2be53ca965d506a!2sCaribe+Royale+Orlando%2C+World+Center+Drive%2C+Orlando%2C+FL!3m2!1d28.3596813!2d-81.4934196!4m5!1s0x88e77eacb004afb3%3A0x20f3d8b528c81c23!2sHoly+Land+Experience%2C+Vineland+Road%2C+Orlando%2C+FL!3m2!1d28.4954215!2d-81.4331424!5e0!3m2!1sen!2sus!4v1564754175221!5m2!1sen!2sus" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+										</div>
+									</div>
+								</div>
+								<!-- Legoland  -->
+								<div class="card">
+									<div class="card-header text-left" id="legoland-header">
+										<h2 class="mb-0">
+											<button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#legoland-collapse" aria-expanded="false" aria-controls="legoland-collapse">
+												Legoland
+											</button>
+										</h2>
+									</div>
+									<div id="legoland-collapse" class="collapse" aria-labelledby="legoland-header" data-parent="#things-to-do-accordion">
+										<div class="card-body text-left">
+											<img th:src="@{/img/things-to-do/legoland.jpg}" class="rounded img-thumbnail" alt="Legoland" />
+											<p class="pt-3">
+												<a href="https://www.legoland.com/florida" target="_blank">Legoland</a> is marketed to families with younger children (11 and under), and although the
+												attractions include a number of roller coasters, the roller coasters are not as numerous or as extreme as those in other parks, and there is a greater
+												emphasis on rides suitable for younger children. Legoland parks are split into various areas, which are consistent among the chain's parks. For example, all
+												six of the parks include a Lego miniland, a model village which includes models of landmarks and scenes from around the world, made from millions of genuine
+												Lego bricks.
+											</p>
+											<a href="https://goo.gl/maps/HddP4YkXjwxgi1Uv7" target="_blank">Directions to Legoland from Caribe Royale</a><br />
+											<iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d336498.2113555284!2d-81.22140859692051!3d28.55275993271796!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0x88dd81b583f711ad%3A0x2be53ca965d506a!2sCaribe+Royale+Orlando%2C+World+Center+Drive%2C+Orlando%2C+FL!3m2!1d28.3596813!2d-81.4934196!4m5!1s0x88dd0d887ee5cadf%3A0xbc6c5dcfe838271a!2sLEGOLAND%C2%AE+Florida+Resort%2C+Legoland+Way%2C+Winter+Haven%2C+FL!3m2!1d27.9889188!2d-81.691074!5e0!3m2!1sen!2sus!4v1564754210511!5m2!1sen!2sus" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+										</div>
+									</div>
+								</div>
+								<!-- Orlando Escape Game  -->
+								<div class="card">
+									<div class="card-header text-left" id="orlando-escape-game-header">
+										<h2 class="mb-0">
+											<button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#orlando-escape-game-collapse" aria-expanded="false" aria-controls="orlando-escape-game-collapse">
+												Orlando Escape Game
+											</button>
+										</h2>
+									</div>
+									<div id="orlando-escape-game-collapse" class="collapse" aria-labelledby="orlando-escape-game-header" data-parent="#things-to-do-accordion">
+										<div class="card-body text-left">
+											<img th:src="@{/img/things-to-do/orlando-escape-game.jpg}" class="rounded img-thumbnail" alt="Orlando Escape Game" />
+											<p class="pt-3">
+												<a href="https://theescapegame.com/orlando" target="_blank">Orlando Escape Game</a> is a thrilling experience where you are put into a room full of
+												puzzles, riddles, and other mysteries. Each escape game has a theme such as prison break, gold rush, and the heist. You are given an hour to solve a
+												mystery and get yourself out of the room. Ashley and Jon visited the escape room the first time Ashley met Jon's parents. In the good news section,
+												they escaped with just a few minutes remaining. 
+											</p>
+											<a href="https://goo.gl/maps/asog3PnURRM3ufw88" target="_blank">Directions to Orlando Escape Game from Caribe Royale</a><br />
+											<iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d336498.2113555284!2d-81.22140859692051!3d28.55275993271796!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0x88dd81b583f711ad%3A0x2be53ca965d506a!2sCaribe+Royale+Orlando%2C+World+Center+Drive%2C+Orlando%2C+FL!3m2!1d28.3596813!2d-81.4934196!4m5!1s0x88e77e54c439e139%3A0x831be9690fb106d3!2sThe+Escape+Game+Orlando%2C+8145+International+Dr+%23511%2C+Orlando%2C+FL+32819!3m2!1d28.448217999999997!2d-81.47056099999999!5e0!3m2!1sen!2sus!4v1564754250174!5m2!1sen!2sus" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+										</div>
+									</div>
+								</div>
+								<!-- Black Hammock Airboat Ride  -->
+								<div class="card">
+									<div class="card-header text-left" id="black-hammock-airboat-header">
+										<h2 class="mb-0">
+											<button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#black-hammock-airboat-collapse" aria-expanded="false" aria-controls="black-hammock-airboat-collapse">
+												Black Hammock Airboat Ride
+											</button>
+										</h2>
+									</div>
+									<div id="black-hammock-airboat-collapse" class="collapse" aria-labelledby="black-hammock-airboat-header" data-parent="#things-to-do-accordion">
+										<div class="card-body text-left">
+											<img th:src="@{/img/things-to-do/black-hammock-airboat.jpg}" class="rounded img-thumbnail" alt="Black Hammock Airboat" />
+											<p class="pt-3">
+												<a href="http://www.blackhammockairboatrides.com" target="_blank">Black Hammock Airboat</a> is an ideal place to visit for those interested in exploring
+												all of the unique nature that exists in Central Florida! On the airboat ride you get a chance to see the popular Florida aligators. Take a relaxing
+												ride on the airboat, take in the Florida breeze, and enjoy another unique experience that Florida has to offer.
+											</p>
+											<a href="https://goo.gl/maps/1Y6pxtRkpFuJPgXm6" target="_blank">Directions to Black Hammock Airboat from Caribe Royale</a><br />
+											<iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d336498.2113555284!2d-81.22140859692051!3d28.55275993271796!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0x88dd81b583f711ad%3A0x2be53ca965d506a!2sCaribe+Royale+Orlando%2C+World+Center+Drive%2C+Orlando%2C+FL!3m2!1d28.3596813!2d-81.4934196!4m5!1s0x88e76a52de3e5fe9%3A0x6107b5b35ba7f6ee!2sBlack+Hammock+Orlando+Airboat+Rides%2C+Black+Hammock+Fish+Camp+Road%2C+Oviedo%2C+FL!3m2!1d28.705012999999997!2d-81.206746!5e0!3m2!1sen!2sus!4v1564754287043!5m2!1sen!2sus" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+										</div>
+									</div>
+								</div>
+								<!-- Margaritaville  -->
+								<div class="card">
+									<div class="card-header text-left" id="margaritaville-header">
+										<h2 class="mb-0">
+											<button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#margaritaville-collapse" aria-expanded="false" aria-controls="margaritaville-collapse">
+												Margaritaville
+											</button>
+										</h2>
+									</div>
+									<div id="margaritaville-collapse" class="collapse" aria-labelledby="margaritaville-header" data-parent="#things-to-do-accordion">
+										<div class="card-body text-left">
+											<img th:src="@{/img/things-to-do/margaritaville.jpg}" class="rounded img-thumbnail" alt="Margaritaville" />
+											<p class="pt-3">
+												<a href="https://www.margaritavilleresortorlando.com" target="_blank">Margaritaville</a> is your little piece of paradise, your private oasis, where luxury
+												and heart-pounding fun meet — beautifully. You’ll find lush grounds dotted with vacation cottages, a 184-room luxury hotel and cozy timeshares, all
+												Margaritaville-inspired to delight at every turn. The amenities are equally spectacular — with a lagoon-style pool, soft sand beaches, a waterpark,
+												relaxing spa, fitness center, entertainment, shopping and dining, all within walking distance.
+											</p>
+											<a href="https://goo.gl/maps/8sCzUEaSKRbEDRkr6" target="_blank">Directions to Margaritaville from Caribe Royale</a><br />
+											<iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d336498.2113555284!2d-81.22140859692051!3d28.55275993271796!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0x88dd81b583f711ad%3A0x2be53ca965d506a!2sCaribe+Royale+Orlando%2C+World+Center+Drive%2C+Orlando%2C+FL!3m2!1d28.3596813!2d-81.4934196!4m5!1s0x88dd7c21c4fff72d%3A0x2b89564b3d5ef2ba!2sMargaritaville+Resort+Orlando%2C+Fins+Up+Circle%2C+Kissimmee%2C+FL!3m2!1d28.340826!2d-81.6094821!5e0!3m2!1sen!2sus!4v1564754318177!5m2!1sen!2sus" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+										</div>
+									</div>
+								</div>
+								<!-- Celebration Town Center  -->
+								<div class="card">
+									<div class="card-header text-left" id="celebration-town-center-header">
+										<h2 class="mb-0">
+											<button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#celebration-town-center-collapse" aria-expanded="false" aria-controls="celebration-town-center-collapse">
+												Celebration Town Center
+											</button>
+										</h2>
+									</div>
+									<div id="celebration-town-center-collapse" class="collapse" aria-labelledby="celebration-town-center-header" data-parent="#things-to-do-accordion">
+										<div class="card-body text-left">
+											<img th:src="@{/img/things-to-do/celebration.jpg}" class="rounded img-thumbnail" alt="Celebration Town Center" />
+											<p class="pt-3">
+												<a href="https://celebrationtowncenter.com/" target="_blank">Celebration Town Center</a> is the finest selection of traditional shops and boutiques with
+												something for everyone in the family, as well a business district, all modeled after those found in small American towns. Retail shops, restaurants, a town
+												hall, post office, and offices are among the downtown businesses. Many of these buildings are situated along a wide promenade circling a lake. Enjoy walking
+												the brick-lined streets of Celebration Town Center and spend time with family and friends.
+											</p>
+											<a href="https://goo.gl/maps/mwAizken43qkb33UA" target="_blank">Directions to Celebration Town Center from Caribe Royale</a><br />
+											<iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d336498.2113555284!2d-81.22140859692051!3d28.55275993271796!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0x88dd81b583f711ad%3A0x2be53ca965d506a!2sCaribe+Royale+Orlando%2C+World+Center+Drive%2C+Orlando%2C+FL!3m2!1d28.3596813!2d-81.4934196!4m5!1s0x88dd7f34da223717%3A0x414e451c76e019a2!2sCelebration+Town+Center%2C+Sycamore+Street%2C+Celebration%2C+FL!3m2!1d28.318513199999998!2d-81.5397734!5e0!3m2!1sen!2sus!4v1564754434533!5m2!1sen!2sus" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="guestbook">
+			<div class="row">
+				<div class="col-12">
+					<h1>Sign Our Guestbook</h1>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-12">
+					<div class="card">
+						<div class="card-body">
+							<form>
+								<div class="form-group">
+									<label for="name">Name</label>
+									<input type="text" class="form-control" id="name" aria-describedby="nameHelp" placeholder="Enter name" />
+								</div>
+								<div class="form-group">
+									<label for="message">Guestbook Message</label>
+									<small id="messageHelp" class="form-text text-muted">Tell us something special or give us some advice for our marriage.</small>
+									<textarea class="form-control" id="message" rows="5" aria-describedby="messageHelp" placeholder="What message do you have for us?"></textarea>
+								</div>
+								<input type="text" id="protection" class="d-none" />
+								<button type="button" id="saveGuestbookEntryBtn" class="btn btn-primary mb-2">Save Message</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="guestbookMessages" th:classappend="${guestbookEntries == null || guestbookEntries.isEmpty() ? 'row mt-3 d-none' : 'row mt-3'}">
+				<div class="col-12">
+					<ul class="list-group" th:if="${guestbookEntries} != null">
+						<li class="list-group-item" th:each="entry : ${guestbookEntries}">
+							<div class="row">
+								<div class="col-md-2">[[${entry.dateCreatedWithoutTime}]]</div>
+								<div class="col-md-2">[[${entry.name}]]</div>
+								<div class="col-md-8">[[${entry.message}]]</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+		<section id="photos">
+			<div class="row">
+				<div class="col-12">
+					<h1>Photo Gallery</h1>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-12">
+					<div class="card">
+						<div class="card-body">
+							<div class="photo-gallery">
+								<div class="row">
+									<div class="col-sm-6 col-md-4">
+										<div class="thumbnail">
+											<a class="lightbox" th:href="@{/img/gallery/cake-on-shirt.jpg}">
+												<img th:src="@{/img/gallery/cake-on-shirt.jpg}" class="rounded img-thumbnail" alt="Cake on shirt at Aubrey birthday">
+											</a>
+											<div class="caption">
+												<h3>Aubrey's 1st Birthday</h3>
+												<p>Aubrey wasn't sure what to do with the case...so she wiped it all over Jonathan.</p>
+											</div>
+										</div>
+									</div>
+									<div class="col-sm-6 col-md-4">
+										<div class="thumbnail">
+											<a class="lightbox" th:href="@{/img/gallery/beautiful-view.jpg}">
+												<img th:src="@{/img/gallery/beautiful-view.jpg}" class="rounded img-thumbnail" alt="Beautiful view">
+											</a>
+											<div class="caption">
+												<h3>St. Thomas</h3>
+												<p>Ashley and Jonathan taking in a beautiful view in St. Thomas. They went there on Ashley's grandfather's 80th birthday cruise.</p>
+											</div>
+										</div>
+									</div>
+									<div class="col-sm-6 col-md-4">
+										<div class="thumbnail">
+											<a class="lightbox" th:href="@{/img/gallery/engaged.jpg}">
+												<img th:src="@{/img/gallery/engaged.jpg}" class="rounded img-thumbnail" alt="Engaged">
+											</a>
+											<div class="caption">
+												<h3>Engagement Fireworks</h3>
+												<p>Fireworks soared over Cinderella's Castle at Magic Kingdom just minutes after Jonathan proposed to Ashley.</p>
+											</div>
+										</div>
+									</div>
+									<div class="col-sm-6 col-md-4">
+										<div class="thumbnail">
+											<a class="lightbox" th:href="@{/img/gallery/ring.jpg}">
+												<img th:src="@{/img/gallery/ring.jpg}" class="rounded img-thumbnail" alt="Ring">
+											</a>
+											<div class="caption">
+												<h3>The Ring</h3>
+												<p>Ashley shows off her ring during the fireworkds.</p>
+											</div>
+										</div>
+									</div>
+									<div class="col-sm-6 col-md-4">
+										<div class="thumbnail">
+											<a class="lightbox" th:href="@{/img/gallery/epcot.jpg}">
+												<img th:src="@{/img/gallery/epcot.jpg}" class="rounded img-thumbnail" alt="Epcot">
+											</a>
+											<div class="caption">
+												<h3>Epcot</h3>
+												<p>Ashley and Jon's first trip to Disney together. They stopped in Paris at the World Showcase for a quick picture.</p>
+											</div>
+										</div>
+									</div>
+									<div class="col-sm-6 col-md-4">
+										<div class="thumbnail">
+											<a class="lightbox" th:href="@{/img/gallery/great-inflatable-race.jpg}">
+												<img th:src="@{/img/gallery/great-inflatable-race.jpg}" class="rounded img-thumbnail" alt="Great Inflatable Race">
+											</a>
+											<div class="caption">
+												<h3>The Great Inflatable Race</h3>
+												<p>Ashley and Jon ran in a fun 5K filled with inflatable obsticles that were fun for everyone.</p>
+											</div>
+										</div>
+									</div>
+									<div class="col-sm-6 col-md-4">
+										<div class="thumbnail">
+											<a class="lightbox" th:href="@{/img/gallery/big-thunder-mountain.jpg}">
+												<img th:src="@{/img/gallery/big-thunder-mountain.jpg}" class="rounded img-thumbnail" alt="Big Thunder Mountain">
+											</a>
+											<div class="caption">
+												<h3>Fiona's Disney Trip</h3>
+												<p>Fiona rode Big Thunder Mountain for the first time with Ashley. She loved it!</p>
+											</div>
+										</div>
+									</div>
+									<div class="col-sm-6 col-md-4">
+										<div class="thumbnail">
+											<a class="lightbox" th:href="@{/img/gallery/hoop-de-doo.jpg}">
+												<img th:src="@{/img/gallery/hoop-de-doo.jpg}" class="rounded img-thumbnail" alt="Hoop-de-doo">
+											</a>
+											<div class="caption">
+												<h3>Hoop-Dee-Doo</h3>
+												<p>Ashley and Jonathan enjoying the Hoop-Dee-Doo Musical Revue dinner show for their friend Michelle's birthday.</p>
+											</div>
+										</div>
+									</div>
+									<div class="col-sm-6 col-md-4">
+										<div class="thumbnail">
+											<a class="lightbox" th:href="@{/img/gallery/engagement-toast.jpg}">
+												<img th:src="@{/img/gallery/engagement-toast.jpg}" class="rounded img-thumbnail" alt="Engagement toast">
+											</a>
+											<div class="caption">
+												<h3>Engagement Toast</h3>
+												<p>An estute bar tender realized something big just happened and offered Ashley and Jon some champagne to celebrate their engagement.</p>
+											</div>
+										</div>
+									</div>
+									<div class="col-sm-6 col-md-4">
+										<div class="thumbnail">
+											<a class="lightbox" th:href="@{/img/gallery/engagement-seeing-family.jpg}">
+												<img th:src="@{/img/gallery/engagement-seeing-family.jpg}" class="rounded img-thumbnail" alt="Engagement seeing family">
+											</a>
+											<div class="caption">
+												<h3>Ugly Cry</h3>
+												<p>What Ashley describes as her ugly cry after seeing her parents and grandparents were there to celebrate the engagement.</p>
+											</div>
+										</div>
+									</div>
+									<div class="col-sm-6 col-md-4">
+										<div class="thumbnail">
+											<a class="lightbox" th:href="@{/img/gallery/engagement-family-photo.jpg}">
+												<img th:src="@{/img/gallery/engagement-family-photo.jpg}" class="rounded img-thumbnail" alt="Engagement family photo">
+											</a>
+											<div class="caption">
+												<h3>Family Engagement Photo</h3>
+												<p>A photo with the family that could make it to the engagement celebration.</p>
+											</div>
+										</div>
+									</div>
+									<div class="col-sm-6 col-md-4">
+										<div class="thumbnail">
+											<a class="lightbox" th:href="@{/img/gallery/evansville-with-alex.jpg}">
+												<img th:src="@{/img/gallery/evansville-with-alex.jpg}" class="rounded img-thumbnail" alt="University of Evansville with Alex">
+											</a>
+											<div class="caption">
+												<h3>Evansville</h3>
+												<p>Alex, Tom, Ashley, and Jon during Jon's first visit to Ashley's college, University of Evansville.</p>
+											</div>
+										</div>
+									</div>
+									<div class="col-sm-6 col-md-4">
+										<div class="thumbnail">
+											<a class="lightbox" th:href="@{/img/gallery/magic-kingdom.jpg}">
+												<img th:src="@{/img/gallery/magic-kingdom.jpg}" class="rounded img-thumbnail" alt="Magic Kingdom">
+											</a>
+											<div class="caption">
+												<h3>Magic Kingdom</h3>
+												<p>Ashley and Jon share a romantic moment in front of the beautifully lit Cinderella's Castle during Christmas time.</p>
+											</div>
+										</div>
+									</div>
+									<div class="col-sm-6 col-md-4">
+										<div class="thumbnail">
+											<a class="lightbox" th:href="@{/img/gallery/visit-with-steph.jpg}">
+												<img th:src="@{/img/gallery/visit-with-steph.jpg}" class="rounded img-thumbnail" alt="Visit With Steph">
+											</a>
+											<div class="caption">
+												<h3>Visit from Stephanie</h3>
+												<p>Ashley's cousin Stephanie came to Orlando for a visit. They went bar hopping!</p>
+											</div>
+										</div>
+									</div>
+									<div class="col-sm-6 col-md-4">
+										<div class="thumbnail">
+											<a class="lightbox" th:href="@{/img/gallery/food-and-wine.jpg}">
+												<img th:src="@{/img/gallery/food-and-wine.jpg}" class="rounded img-thumbnail" alt="Food and Wine 2018">
+											</a>
+											<div class="caption">
+												<h3>Food and Wine Festival</h3>
+												<p>Ashley's family came to town for the Food and Wine Festival at Epcot.</p>
+											</div>
+										</div>
+									</div>
+									<div class="col-sm-6 col-md-4">
+										<div class="thumbnail">
+											<a class="lightbox" th:href="@{/img/gallery/ibr-cruise.jpg}">
+												<img th:src="@{/img/gallery/ibr-cruise.jpg}" class="rounded img-thumbnail" alt="IBR cruise 2018">
+											</a>
+											<div class="caption">
+												<h3>IBR cruise</h3>
+												<p>Jon and Ashley enjoyed the day in the Bahamas with Jason and Alexis during the IBR cruise.</p>
+											</div>
+										</div>
+									</div>
+									<div class="col-sm-6 col-md-4">
+										<div class="thumbnail">
+											<a class="lightbox" th:href="@{/img/gallery/ibr-cruise-2.jpg}">
+												<img th:src="@{/img/gallery/ibr-cruise-2.jpg}" class="rounded img-thumbnail" alt="IBR cruise 2018 outside ship">
+											</a>
+											<div class="caption">
+												<h3>Cheesin' by the ship</h3>
+												<p>Ashley and Jon outside the cruise ship in the Bahamas during the IBR cruise.</p>
+											</div>
+										</div>
+									</div>
+									<div class="col-sm-6 col-md-4">
+										<div class="thumbnail">
+											<a class="lightbox" th:href="@{/img/gallery/ibr-cruise-formal-night.jpg}">
+												<img th:src="@{/img/gallery/ibr-cruise-formal-night.jpg}" class="rounded img-thumbnail" alt="IBR cruise 2018 formal night">
+											</a>
+											<div class="caption">
+												<h3>Formal Night</h3>
+												<p>Ashley and Jon got all dressed up for the formal night on the IBR cruise.</p>
+											</div>
+										</div>
+									</div>
+									<div class="col-sm-6 col-md-4">
+										<div class="thumbnail">
+											<a class="lightbox" th:href="@{/img/gallery/ibr-cruise-formal-night-formal-picture.jpg}">
+												<img th:src="@{/img/gallery/ibr-cruise-formal-night-formal-picture.jpg}" class="rounded img-thumbnail" alt="IBR cruise 2018 professional picture">
+											</a>
+											<div class="caption">
+												<h3>Professional Photo</h3>
+												<p>Ashley and Jon took a professional photo on the cruise.</p>
+											</div>
+										</div>
+									</div>
+									<div class="col-sm-6 col-md-4">
+										<div class="thumbnail">
+											<a class="lightbox" th:href="@{/img/gallery/visit-with-texas-family.jpg}">
+												<img th:src="@{/img/gallery/visit-with-texas-family.jpg}" class="rounded img-thumbnail" alt="Visit with Texas family">
+											</a>
+											<div class="caption">
+												<h3>Cousins at Disney</h3>
+												<p>Ashley's cousins came for a visit. They went do Magic Kingdom to meet all the princesses.</p>
+											</div>
+										</div>
+									</div>
+									<div class="col-sm-6 col-md-4">
+										<div class="thumbnail">
+											<a class="lightbox" th:href="@{/img/gallery/fun-date.jpg}">
+												<img th:src="@{/img/gallery/fun-date.jpg}" class="rounded img-thumbnail" alt="Fun date">
+											</a>
+											<div class="caption">
+												<h3>Voodoo Doughnuts</h3>
+												<p>Jonathan took Ashley to Voodoo Doughnuts in City Walk after they road the Orlando Eye. It was one of their first dates.</p>
+											</div>
+										</div>
+									</div>
+									<div class="col-sm-6 col-md-4">
+										<div class="thumbnail">
+											<a class="lightbox" th:href="@{/img/gallery/another-wedding.jpg}">
+												<img th:src="@{/img/gallery/another-wedding.jpg}" class="rounded img-thumbnail" alt="Another wedding">
+											</a>
+											<div class="caption">
+												<h3>Kerilynn's Wedding</h3>
+												<p>Ashley's God-little from her sorority got married!</p>
+											</div>
+										</div>
+									</div>
+									<div class="col-sm-6 col-md-4">
+										<div class="thumbnail">
+											<a class="lightbox" th:href="@{/img/gallery/proposal.jpg}">
+												<img th:src="@{/img/gallery/proposal.jpg}" class="rounded img-thumbnail" alt="Proposal">
+											</a>
+											<div class="caption">
+												<h3>THe Proposal</h3>
+												<p>Jonathan proposed to Ashley on a balcony near Magic Kingdom just minutes before the fireworks. Her sister was able to capture the moment :)</p>
+											</div>
+										</div>
+									</div>
+									<div class="col-sm-6 col-md-4">
+										<div class="thumbnail">
+											<a class="lightbox" th:href="@{/img/gallery/blue-man-group.jpg}">
+												<img th:src="@{/img/gallery/blue-man-group.jpg}" class="rounded img-thumbnail" alt="Blue Man Group">
+											</a>
+											<div class="caption">
+												<h3>Blue Man Group</h3>
+												<p>Jon took Ashley to the Blue Man Group for her birthday.</p>
+											</div>
+										</div>
+									</div>
+									<div class="col-sm-6 col-md-4">
+										<div class="thumbnail">
+											<a class="lightbox" th:href="@{/img/gallery/disney-with-robin.jpg}">
+												<img th:src="@{/img/gallery/disney-with-robin.jpg}" class="rounded img-thumbnail" alt="Disney with the White family">
+											</a>
+											<div class="caption">
+												<h3>DIsney with the Whites</h3>
+												<p>Robin and Murray broght the kids down for a fun filled Disney visit. As you can see, Hudson was pooped by the end of the day.</p>
+											</div>
+										</div>
+									</div>
+									<div class="col-sm-6 col-md-4">
+										<div class="thumbnail">
+											<a class="lightbox" th:href="@{/img/gallery/disney-with-fiona.jpg}">
+												<img th:src="@{/img/gallery/disney-with-fiona.jpg}" class="rounded img-thumbnail" alt="Disney with Fiona">
+											</a>
+											<div class="caption">
+												<h3>Fiona's Princess Experience</h3>
+												<p>Aunt Do joined for Fiona's Disney adventure. Fiona was awe-struck by the princesses.</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+</html>

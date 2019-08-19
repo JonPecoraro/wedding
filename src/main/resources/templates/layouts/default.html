@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout">
+<head>
+	<title>Ashley Will and Jonathan Pecoraro Wedding</title>
+	<meta charset="UTF-8" />
+	<meta name="description" content="Ashley Will and Jonathan Pecoraro wedding website" />
+	<meta name="keywords" content="Jonathan Pecoraro,Pecoraro,Ashley Will,Will,Wedding,Orlando" />
+	<meta name="author" content="Jonathan Pecoraro" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link media="all" rel="icon" th:href="@{/img/icon.png}" />
+	<link media="all" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Playfair+Display">
+	<link media="all" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Great+Vibes">
+	<link media="all" rel="stylesheet" th:href="@{/webjars/bootstrap/4.3.1/css/bootstrap.min.css}" />
+	<link media="all" type="text/css" rel="stylesheet" th:href="@{/css/main.css}" />
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+</head>
+<body role="document">
+	<img id="background-image" th:src="@{/img/background-top-modified.png}" />
+	<div id="content-hider"></div>
+	<nav id="nav" class="navbar navbar-expand-lg sticky-top navbar-light bg-transparent">
+		<ul class="navbar-nav mx-auto">
+		  <li th:classappend="${#httpServletRequest.requestURI.matches('/our-wedding*') ? 'nav-item dropdown active' : 'nav-item dropdown'}">
+	        <a class="nav-link dropdown-toggle" href="#" id="ourWeddingDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Our Wedding</a>
+	        <div class="dropdown-menu" aria-labelledby="ourWeddingDropdown">
+	          <a th:classappend="${#httpServletRequest.requestURI == '/our-wedding' ? 'dropdown-item active' : 'dropdown-item'}" th:href="@{/our-wedding}">Wedding Details</a>
+	          <a th:classappend="${#httpServletRequest.requestURI == '/our-wedding/#story' ? 'dropdown-item active' : 'dropdown-item'}" th:href="@{/our-wedding/#story}">Our Story</a>
+	          <a th:classappend="${#httpServletRequest.requestURI == '/our-wedding/#party' ? 'dropdown-item active' : 'dropdown-item'}" th:href="@{/our-wedding/#party}">Wedding Party</a>
+	        </div>
+	      </li>
+	      <li th:classappend="${#httpServletRequest.requestURI == '/registry' ? 'nav-item active' : 'nav-item'}">
+	        <a class="nav-link" th:href="@{/registry}">Registry</a>
+	      </li>
+	      <li th:classappend="${#httpServletRequest.requestURI == '/rsvp' ? 'nav-item active' : 'nav-item'}">
+	        <a class="nav-link" th:href="@{/rsvp}">RSVP</a>
+	      </li>
+	      <li th:classappend="${#httpServletRequest.requestURI.matches('/extras*') ? 'nav-item dropdown active' : 'nav-item dropdown'}">
+	        <a class="nav-link dropdown-toggle" href="#" id="extrasDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Extras</a>
+	        <div class="dropdown-menu" aria-labelledby="extrasDropdown">
+	          <a th:classappend="${#httpServletRequest.requestURI == '/extras' ? 'dropdown-item active' : 'dropdown-item'}" th:href="@{/extras}">Accommodations</a>
+	          <a th:classappend="${#httpServletRequest.requestURI == '/extras/#things-to-do' ? 'dropdown-item active' : 'dropdown-item'}" th:href="@{/extras/#things-to-do}">Orlando Area</a>
+	          <a th:classappend="${#httpServletRequest.requestURI == '/extras/#guestbook' ? 'dropdown-item active' : 'dropdown-item'}" th:href="@{/extras/#guestbook}">Guestbook</a>
+	          <a th:classappend="${#httpServletRequest.requestURI == '/extras/#photos' ? 'dropdown-item active' : 'dropdown-item'}" th:href="@{/extras/#photos}">Photos</a>
+	        </div>
+	      </li>
+	    </ul>
+	</nav>
+	<main id="main" class="text-center">
+		<div class="container" layout:fragment="content">
+			<!-- This is where the page specific content will go.
+				 Each page using this layout must have the following pieces to work with the layout:
+				 1. <html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorator="layouts/default">
+				 	a) Tells the content page to use this layout
+				 2. <div layout:fragment="content">
+				 	b) Tells the page to replace the content of this div with the content specified in the page's div
+			 	 
+			 	 Example:
+					<!DOCTYPE html>
+					<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorator="layouts/default">
+						<div layout:fragment="content">
+							<p>page specific content</p>
+						</div>
+					</html>
+			 -->
+		</div>
+	</main>
+	<script th:src="@{/webjars/jquery/3.3.1/dist/jquery.min.js}"></script>
+	<script th:src="@{/webjars/bootstrap/4.3.1/js/bootstrap.bundle.min.js}"></script>
+	<script th:src="@{/js/main.js}"></script>
+	<section layout:fragment="additionalScripts" th:remove="tag"></section>
+</body>
+</html>

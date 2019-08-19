@@ -1,0 +1,61 @@
+plugins {
+	id 'org.springframework.boot' version '2.1.3.RELEASE'
+	id 'java'
+}
+
+apply plugin: 'io.spring.dependency-management'
+
+group = 'com.wedding'
+version = '0.0.1'
+sourceCompatibility = '1.8'
+
+repositories {
+	mavenCentral()
+}
+
+dependencyManagement {
+    imports {
+        mavenBom 'com.amazonaws:aws-java-sdk-bom:1.11.613'
+    }
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+	compile 'nz.net.ultraq.thymeleaf:thymeleaf-layout-dialect:2.3.0'
+	compile 'org.thymeleaf.extras:thymeleaf-extras-springsecurity5'
+	implementation 'org.springframework.security.oauth.boot:spring-security-oauth2-autoconfigure:2.0.5.RELEASE'
+	
+	// Devtools
+	runtimeOnly 'org.springframework.boot:spring-boot-devtools'
+	
+	// JPA Data (We are going to use Repositories, Entities, Hibernate, etc...)
+	compile 'org.springframework.boot:spring-boot-starter-data-jpa'
+	
+	// Database
+	runtimeOnly 'org.postgresql:postgresql'
+	
+	// Google libraries
+	compile 'com.google.code.gson:gson:2.8.5'
+	compile 'com.google.guava:guava:12.0'
+	
+	// Okta
+	implementation 'com.okta.spring:okta-spring-boot-starter:1.1.0'
+	compile 'com.okta.spring:okta-spring-sdk:1.0.0'
+	runtime 'com.okta.sdk:okta-sdk-impl:1.0.0'
+	runtime 'com.okta.sdk:okta-sdk-httpclient:1.0.0'
+	
+	// AWS SNS for sending text messages
+	compile 'com.amazonaws:aws-java-sdk-sns'
+	
+	// AWS SES for sending emails
+	compile 'com.amazonaws:aws-java-sdk-ses'
+	
+	// webjars
+	compile 'org.webjars:bootstrap:4.3.1'
+	compile 'org.webjars.bower:jquery:3.3.1'
+	compile 'org.webjars:jquery-ui:1.12.1'
+	
+	// test libraries
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}

@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html  xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorator="layouts/default">
+	<head>
+		<link media="all" rel="stylesheet" th:href="@{/css/our-wedding.css}" />
+	</head>
+	<div layout:fragment="content" th:inline="text">
+		<section id="details">
+			<div class="row">
+				<div class="col-12">
+					<h1>Wedding Details</h1>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-12">
+					<img th:src="@{/img/usChristmasScaled.jpg}" alt="Christmas photo" class="img-fluid rounded mx-auto d-block" />
+				</div>
+			</div>
+			<div class="row mt-4">
+				<div class="col-12">
+					<ul class="list-group">
+						<li class="list-group-item"><strong>Date</strong>: February 29th, 2020</li>
+						<li class="list-group-item">
+							<div class="mb-3">
+								<p><strong>Ceremony</strong>: 1:00pm at <a href="http://www.corpuschristi.church" target="_blank">Corpus Christi Catholic Church</a></p>
+								<p><a href="https://goo.gl/maps/4tjL2cik5TzyWaETA" target="_blank">1050 Celebration Avenue Celebration, FL 34747</a></p>
+							</div>
+							<img th:src="@{/img/corpus-christi.jpg}" class="card-img" alt="Corpus Christi Catholic Church">
+						</li>
+						<li class="list-group-item">
+							<div class="mb-3">
+								<p><strong>Cocktail hour</strong>: 5:00pm at <a href="https://www.cariberoyale.com" target="_blank">Caribe Royal</a></p>
+								<p><a href="https://goo.gl/maps/YUowp7vJ9XnW4Ybq9" target="_blank">8101 World Center Drive, Orlando, Florida, 32821</a></p>
+								<p>Reception to follow</p>
+								<img th:src="@{/img/caribe-royale.jpg}" class="card-img" alt="Caribe Royale">
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+		<section id="story">
+			<div class="row">
+				<div class="col-12">
+					<h1>Our Story</h1>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-12">
+					<div class="card">
+						<div class="card-body text-left">
+							<p>
+								<img th:src="@{/img/animal-kingdom-scaled.jpg}" class="float-left p-2" />
+								Ashley and Jon met on Match. Jon sent Ashley a peculiar, but authentic first message &quot;Hey Ashley, I see you're a Catholic too. Which church do you go to?&quot; Ashley quickly responded, and that was the beginning of a beautiful thing. After about a month of talking, they finally went on their first date. It was a nice dinner with hours of exhilarating conversation where they were able to connect on many different levels. From their family history in Cincinnati, to their love for cruising, they had a lot more in common than they thought. As time went on, the bond between them grew stronger and their love grew deeper.
+							</p>
+							<p>
+								<img th:src="@{/img/silhouette-proposal.png}" class="float-left p-2" />
+								Ashley always dreamed of a Disney fairytale proposal. Jon coordinated with Ashley's sister and her parents for an extravagant Disney proposal to make all her dreams come true. They had a wonderful day at Magic Kingdom, followed by an elegant dinner at the California Grill; a restaurant with a view of Cinderella's castle. Then Jon surprised Ashely with an intimate balcony setting for the proposal. Ashely's sister was hiding with a camera, Jon's dad and Ashley's brother-in-law were in the parking lot getting a different angle. Jon proposed on the balcony minutes before the fireworks over Cinderella's castle. Ashley was ecstatic and after a few tears, she said YES!!! They went from the balcony to a bar where unbeknownst to Ashley, her parents and grandparents were waiting. The room was filled with excitement and joy as everyone celebrated the newly engaged couple.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="party">
+			<h1>Wedding Party</h1>
+			<div class="row m-5">
+				<div class="col-12">
+					<div class="card-deck mx-auto">
+						<div class="card mx-auto">
+							<img th:src="@{/img/wedding-party/vince-scaled.jpg}" class="card-img-top" alt="Vince Pecoraro - Best Man">
+							<div class="card-body">
+								<h3 class="card-title">Vince Pecoraro</h3>
+								<h4 class="card-text">Best Man</h4>
+								<p class="card-text">Vince is Jonathan's brother, and the best man.</p>
+							</div>
+						</div>
+						<div class="card mx-auto">
+							<img th:src="@{/img/wedding-party/alyssa-scaled.jpg}" class="card-img-top" alt="Alyssa - Matron of Honor">
+							<div class="card-body">
+								<h3 class="card-title">Alyssa Will Zegers</h3>
+								<h4 class="card-text">Matron of Honor</h4>
+								<p class="card-text">Alyssa is Ashley's sister, and the matron of honor.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row m-5">
+				<div class="col-12">
+					<div class="card-deck mx-auto">
+						<div class="card mx-auto">
+							<img th:src="@{/img/wedding-party/jason-scaled.jpg}" class="card-img-top" alt="Jason Klemka - Groomsman">
+							<div class="card-body">
+								<h3 class="card-title">Jason Klemka</h3>
+								<h4 class="card-text">Groomsman</h4>
+								<p>Jason is Jonathan's long time friend and a groomsman.</p>
+							</div>
+						</div>
+						<div class="card mx-auto">
+							<img th:src="@{/img/wedding-party/alex-scaled.jpg}" class="card-img-top" alt="Alex - Bridesmaid">
+							<div class="card-body">
+								<h3 class="card-title">Alex Hays</h3>
+								<h4 class="card-text">Bridesmaid</h4>
+								<p class="card-text">Alex is Ashley's college friend, long time room mate, and a bridesmaid.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row m-5">
+				<div class="col-12">
+					<div class="card-deck mx-auto">
+						<div class="card mx-auto">
+							<img th:src="@{/img/wedding-party/russ-scaled.jpg}" class="card-img-top" alt="Russ Anderson - Groomsman">
+							<div class="card-body">
+								<h3 class="card-title">Russ Anderson</h3>
+								<h4 class="card-text">Groomsman</h4>
+								<p>Russ is Jonathan's long time friend and a groomsman.</p>
+							</div>
+						</div>
+						<div class="card mx-auto">
+							<img th:src="@{/img/wedding-party/rainey-scaled.jpg}" class="card-img-top" alt="Rainey Anderson - Bridesmaid">
+							<div class="card-body">
+								<h3 class="card-title">Rainey Anderson</h3>
+								<h4 class="card-text">Bridesmaid</h4>
+								<p class="card-text">Rainey is a good friend of Ashley, and a bridesmaid.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row m-5">
+				<div class="col-12">
+					<div class="card-deck mx-auto">
+						<div class="card mx-auto">
+							<img th:src="@{/img/wedding-party/murray-scaled.jpg}" class="card-img-top" alt="Murray White IV - Groomsman">
+							<div class="card-body">
+								<h3 class="card-title">Murray White IV</h3>
+								<h4 class="card-text">Groomsman</h4>
+								<p>Murray is Jonathan's brother-in-law, and a groomsman.</p>
+							</div>
+						</div>
+						<div class="card mx-auto">
+							<img th:src="@{/img/wedding-party/robin-scaled.jpg}" class="card-img-top" alt="Robin White - Bridesmaid">
+							<div class="card-body">
+								<h3 class="card-title">Robin White</h3>
+								<h4 class="card-text">Bridesmaid</h4>
+								<p class="card-text">Robin is Jonathan's sister, and a bridesmaid.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row m-5">
+				<div class="col-12">
+					<div class="card-deck mx-auto">
+						<div class="card mx-auto">
+							<img th:src="@{/img/wedding-party/devin-scaled.jpg}" class="card-img-top" alt="Devin Holmes - Groomsman">
+							<div class="card-body">
+								<h3 class="card-title">Devin Holmes</h3>
+								<h4 class="card-text">Groomsman</h4>
+								<p>Devin is Jonathan's long time friend and a groomsman.</p>
+							</div>
+						</div>
+						<div class="card mx-auto">
+							<img th:src="@{/img/wedding-party/amber-scaled.jpg}" class="card-img-top" alt="Amber Pecoraro - Bridesmaid">
+							<div class="card-body">
+								<h3 class="card-title">Amber Pecoraro</h3>
+								<h4 class="card-text">Bridesmaid</h4>
+								<p class="card-text">Amber is Jonathan's sister-in-law, and a bridesmaid.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row m-5">
+				<div class="col-12">
+					<div class="card-deck mx-auto">
+						<div class="card mx-auto">
+							<img th:src="@{/img/wedding-party/jonathan-scaled.jpg}" class="card-img-top" alt="Jonathan Zegers - Groomsman">
+							<div class="card-body">
+								<h3 class="card-title">Jonathan Zegers</h3>
+								<h4 class="card-text">Groomsman</h4>
+								<p>Jonathan is Ashley's brother-in-law and a groomsman.</p>
+							</div>
+						</div>
+						<div class="card mx-auto">
+							<img th:src="@{/img/wedding-party/kate-scaled.jpg}" class="card-img-top" alt="Katelyn Crush - Bridesmaid">
+							<div class="card-body">
+								<h3 class="card-title">Katelyn Crush</h3>
+								<h4 class="card-text">Bridesmaid</h4>
+								<p class="card-text">Katelyn is Ashley's high school friend, and a bridesmaid.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row m-5">
+				<div class="col-12">
+					<div class="card-deck mx-auto">
+						<div class="card mx-auto">
+							<img th:src="@{/img/wedding-party/matt-scaled.jpg}" class="card-img-top" alt="Matt Gaines - Groomsman">
+							<div class="card-body">
+								<h3 class="card-title">Matt Gaines</h3>
+								<h4 class="card-text">Groomsman</h4>
+								<p>Matt is Jonathan's long time friend and a groomsman.</p>
+							</div>
+						</div>
+						<div class="card mx-auto">
+							<img th:src="@{/img/wedding-party/stephanie-scaled.jpg}" class="card-img-top" alt="Stephanie Sickbert - Bridesmaid">
+							<div class="card-body">
+								<h3 class="card-title">Stephanie Sickbert</h3>
+								<h4 class="card-text">Bridesmaid</h4>
+								<p class="card-text">Stephanie is Ashley's cousin, and a bridesmaid.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<!-- Ring bearers and flower girls -->
+			<div class="row m-5">
+				<div class="col-12">
+					<div class="card-deck mx-auto">
+						<div class="card mx-auto">
+							<img th:src="@{/img/wedding-party/murray5-scaled.jpg}" class="card-img-top" alt="Murray White 5 - Ring Bearer">
+							<div class="card-body">
+								<h3 class="card-title">Murray White 5</h3>
+								<h4 class="card-text">Ring Bearer</h4>
+								<p>Murray is Jonathan's nephew, and a ring bearer.</p>
+							</div>
+						</div>
+						<div class="card mx-auto">
+							<img th:src="@{/img/wedding-party/fiona-scaled.jpg}" class="card-img-top" alt="Fiona - Flower Girl">
+							<div class="card-body">
+								<h3 class="card-title">Fiona Pecoraro</h3>
+								<h4 class="card-text">Flower Girl</h4>
+								<p class="card-text">Fiona is Jonathan's oldest niece and one of the flower girls.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row m-5">
+				<div class="col-12">
+					<div class="card-deck mx-auto">
+						<div class="card mx-auto">
+							<img th:src="@{/img/wedding-party/vinny-scaled.jpg}" class="card-img-top" alt="Vincent Pecoraro - Ring Bearer">
+							<div class="card-body">
+								<h3 class="card-title">Vincent Pecoraro</h3>
+								<h4 class="card-text">Ring Bearer</h4>
+								<p>Vincent is Jonathan's nephew, and a ring bearer.</p>
+							</div>
+						</div>
+						<div class="card mx-auto">
+							<img th:src="@{/img/wedding-party/kaylin-scaled.jpg}" class="card-img-top" alt="Cailyn Gonzalez - Flower Girl">
+							<div class="card-body">
+								<h3 class="card-title">Cailyn Gonzalez</h3>
+								<h4 class="card-text">Flower Girl</h4>
+								<p class="card-text">Cailyn is Ashley's cousin and one of the flower girls.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row m-5">
+				<div class="col-12">
+					<div class="card-deck mx-auto">
+						<div class="card mx-auto">
+							<img th:src="@{/img/wedding-party/hudson-scaled.jpg}" class="card-img-top" alt="Hudson White - Ring Bearer">
+							<div class="card-body">
+								<h3 class="card-title">Hudson White</h3>
+								<h4 class="card-text">Ring Bearer</h4>
+								<p>Hudson is Jonathan's nephew, and a ring bearer.</p>
+							</div>
+						</div>
+						<div class="card mx-auto">
+							<img th:src="@{/img/wedding-party/hannah-scaled.jpg}" class="card-img-top" alt="Hannah Gonzalez - Flower Girl">
+							<div class="card-body">
+								<h3 class="card-title">Hannah Gonzalez</h3>
+								<h4 class="card-text">Flower Girl</h4>
+								<p class="card-text">Hannah is Ashley's cousin and one of the flower girls.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row m-5">
+				<div class="col-12">
+					<div class="card-deck mx-auto">
+						<div class="card mx-auto">
+							<img th:src="@{/img/wedding-party/tony-scaled.jpg}" class="card-img-top" alt="Anthony Pecoraro - Ring Bearer">
+							<div class="card-body">
+								<h3 class="card-title">Anthony Pecoraro</h3>
+								<h4 class="card-text">Ring Bearer</h4>
+								<p>Tony is Jonathan's nephew, and a ring bearer.</p>
+							</div>
+						</div>
+						<div class="card mx-auto">
+							<img th:src="@{/img/wedding-party/sadie-scaled.jpg}" class="card-img-top" alt="Sadie White - Flower Girl">
+							<div class="card-body">
+								<h3 class="card-title">Sadie White</h3>
+								<h4 class="card-text">Flower Girl</h4>
+								<p class="card-text">Sadie is Jonathan's niece and one of the flower girls.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+</html>

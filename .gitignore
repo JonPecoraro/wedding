@@ -1,0 +1,11 @@
+HELP.md
+.gradle
+/bin/
+/build/
+!gradle/wrapper/gradle-wrapper.jar
+/src/main/resources/application-local.yml
+
+### STS ###
+.classpath
+.project
+.settings
