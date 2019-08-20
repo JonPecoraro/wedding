@@ -5,11 +5,13 @@ Table structure for table 'public.guest'
 DROP TABLE IF EXISTS "public"."guest" CASCADE;
 CREATE TABLE "public"."guest" (
   "id" SERIAL PRIMARY KEY NOT NULL,
-	"first_name" VARCHAR(255)  NOT NULL,
-	"last_name" VARCHAR(255)  NOT NULL,
-	"suffix" VARCHAR(255),
-	"email" VARCHAR(255),
-  "address" VARCHAR(255)
+  "first_name" VARCHAR(255)  NOT NULL,
+  "last_name" VARCHAR(255)  NOT NULL,
+  "suffix" VARCHAR(255),
+  "email" VARCHAR(255),
+  "rsvpResponse" VARCHAR(255),
+  "foodChoice" VARCHAR(255),
+  "plansToUseRoomBlock" VARCHAR(255)
 ) WITH OIDS;
 
 /*
