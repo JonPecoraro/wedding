@@ -2,6 +2,7 @@ HELP.md
 .gradle
 /bin/
 /build/
+/temp/
 !gradle/wrapper/gradle-wrapper.jar
 /src/main/resources/application-local.yml
 
