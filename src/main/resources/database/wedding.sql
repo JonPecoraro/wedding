@@ -9,9 +9,9 @@ CREATE TABLE "public"."guest" (
   "last_name" VARCHAR(255)  NOT NULL,
   "suffix" VARCHAR(255),
   "email" VARCHAR(255),
-  "rsvpResponse" VARCHAR(255),
-  "foodChoice" VARCHAR(255),
-  "plansToUseRoomBlock" VARCHAR(255)
+  "rsvp_response" VARCHAR(255),
+  "food_choice" VARCHAR(255),
+  "plans_to_use_room_block" VARCHAR(255)
 ) WITH OIDS;
 
 /*
