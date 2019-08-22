@@ -6,7 +6,7 @@ phases:
       java: corretto8
   build:
     commands:
-       - gradle build -x test
+       - gradle bootJar
 artifacts:
   type: zip
   files:
