@@ -8,7 +8,7 @@
 body {
 	font-family: 'Playfair Display', serif;
 	font-size: 1.1em;
-	background: #FCFCFC url(/img/background-modified.png) top/100% auto no-repeat border-box fixed;
+	background-color: #FCFCFC;
 }
 
 #nav, h1 {
@@ -16,16 +16,11 @@ body {
 }
 
 #nav {
-	background-color: rgba(249,249,249,0.9);
+	background-color: rgba(249,249,249,1.0);
 	padding: 0;
-	margin-top: 10%;
 }
 
 /* Navigation styles */
-#nav li {
-	padding: 0 10px;
-}
-
 #nav li a {
 	font-size: 2em;
 }
@@ -34,38 +29,24 @@ body {
 	font-size: 1.5em;
 }
 
-.nav-bg {
-	background-color: rgba(249,249,249,0.9);
-}
-
-@media (max-width: 669px) {
-	#nav, h1 {
-		font-family: sans-serif;
-	}
-}
-
-#background-image {
-	position: fixed;
-	top: 0;
-	width: 100%;
-	z-index: 1000;
-}
-/* End - Navigation styles */
-
-/* Used to hide content when it scrolls to the navbar. That way the navbar can always be at the top and no content will overlap it */
-#content-hider {
-	position: fixed;
-    top: 0;
-    padding-top: 9%;
-    width: 100%;
-    background-color: #FCFCFC;
-        box-shadow: 0px 10px 20px 0px #FCFCFC;
-    z-index: 500;
-}
-
 /* Common styles */
 h1 {
 	font-size: 2.5em;
 	padding: 1.2em;
 }
 /* End - Common styles */
+
+/* Desktop devices media queries */
+@media (min-width: 992px) {
+	body {
+		background: #FCFCFC url(/img/background-modified.png) top/100% auto no-repeat border-box fixed;
+	}
+	
+	#nav {
+		margin-top: 10%;
+	}
+	
+	#nav li {
+		padding: 0 10px;
+	}
+}

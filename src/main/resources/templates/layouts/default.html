@@ -22,34 +22,37 @@
 	<![endif]-->
 </head>
 <body role="document">
-	<img id="background-image" th:src="@{/img/background-top-modified.png}" />
-	<div id="content-hider"></div>
 	<nav id="nav" class="navbar navbar-expand-lg sticky-top navbar-light bg-transparent">
-		<ul class="navbar-nav mx-auto">
-		  <li th:classappend="${#httpServletRequest.requestURI.matches('/our-wedding*') ? 'nav-item dropdown active' : 'nav-item dropdown'}">
-	        <a class="nav-link dropdown-toggle" href="#" id="ourWeddingDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Our Wedding</a>
-	        <div class="dropdown-menu" aria-labelledby="ourWeddingDropdown">
-	          <a th:classappend="${#httpServletRequest.requestURI == '/our-wedding' ? 'dropdown-item active' : 'dropdown-item'}" th:href="@{/our-wedding}">Wedding Details</a>
-	          <a th:classappend="${#httpServletRequest.requestURI == '/our-wedding/#story' ? 'dropdown-item active' : 'dropdown-item'}" th:href="@{/our-wedding/#story}">Our Story</a>
-	          <a th:classappend="${#httpServletRequest.requestURI == '/our-wedding/#party' ? 'dropdown-item active' : 'dropdown-item'}" th:href="@{/our-wedding/#party}">Wedding Party</a>
-	        </div>
-	      </li>
-	      <li th:classappend="${#httpServletRequest.requestURI == '/registry' ? 'nav-item active' : 'nav-item'}">
-	        <a class="nav-link" th:href="@{/registry}">Registry</a>
-	      </li>
-	      <li th:classappend="${#httpServletRequest.requestURI == '/rsvp' ? 'nav-item active' : 'nav-item'}">
-	        <a class="nav-link" th:href="@{/rsvp}">RSVP</a>
-	      </li>
-	      <li th:classappend="${#httpServletRequest.requestURI.matches('/extras*') ? 'nav-item dropdown active' : 'nav-item dropdown'}">
-	        <a class="nav-link dropdown-toggle" href="#" id="extrasDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Extras</a>
-	        <div class="dropdown-menu" aria-labelledby="extrasDropdown">
-	          <a th:classappend="${#httpServletRequest.requestURI == '/extras' ? 'dropdown-item active' : 'dropdown-item'}" th:href="@{/extras}">Accommodations</a>
-	          <a th:classappend="${#httpServletRequest.requestURI == '/extras/#things-to-do' ? 'dropdown-item active' : 'dropdown-item'}" th:href="@{/extras/#things-to-do}">Orlando Area</a>
-	          <a th:classappend="${#httpServletRequest.requestURI == '/extras/#guestbook' ? 'dropdown-item active' : 'dropdown-item'}" th:href="@{/extras/#guestbook}">Guestbook</a>
-	          <a th:classappend="${#httpServletRequest.requestURI == '/extras/#photos' ? 'dropdown-item active' : 'dropdown-item'}" th:href="@{/extras/#photos}">Photos</a>
-	        </div>
-	      </li>
-	    </ul>
+		<button id="hamburger-button" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav mx-auto">
+			  <li th:classappend="${#httpServletRequest.requestURI.startsWith('/our-wedding') ? 'nav-item dropdown active' : 'nav-item dropdown'}">
+		        <a class="nav-link dropdown-toggle" href="#" id="ourWeddingDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Our Wedding</a>
+		        <div class="dropdown-menu" aria-labelledby="ourWeddingDropdown">
+		          <a th:classappend="${#httpServletRequest.requestURI == '/our-wedding' ? 'dropdown-item active' : 'dropdown-item'}" th:href="@{/our-wedding}">Wedding Details</a>
+		          <a class="dropdown-item" th:href="@{/our-wedding/#story}">Our Story</a>
+		          <a class="dropdown-item" th:href="@{/our-wedding/#party}">Wedding Party</a>
+		        </div>
+		      </li>
+		      <li th:classappend="${#httpServletRequest.requestURI == '/registry' ? 'nav-item active' : 'nav-item'}">
+		        <a class="nav-link" th:href="@{/registry}">Registry</a>
+		      </li>
+		      <li th:classappend="${#httpServletRequest.requestURI == '/rsvp' ? 'nav-item active' : 'nav-item'}">
+		        <a class="nav-link" th:href="@{/rsvp}">RSVP</a>
+		      </li>
+		      <li th:classappend="${#httpServletRequest.requestURI.startsWith('/extras') ? 'nav-item dropdown active' : 'nav-item dropdown'}">
+		        <a class="nav-link dropdown-toggle" href="#" id="extrasDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Extras</a>
+		        <div class="dropdown-menu" aria-labelledby="extrasDropdown">
+		          <a th:classappend="${#httpServletRequest.requestURI == '/extras' ? 'dropdown-item active' : 'dropdown-item'}" th:href="@{/extras}">Accommodations</a>
+		          <a class="dropdown-item" th:href="@{/extras/#things-to-do}">Orlando Area</a>
+		          <a class="dropdown-item" th:href="@{/extras/#guestbook}">Guestbook</a>
+		          <a class="dropdown-item" th:href="@{/extras/#photos}">Photos</a>
+		        </div>
+		      </li>
+		    </ul>
+		</div>
 	</nav>
 	<main id="main" class="text-center">
 		<div class="container" layout:fragment="content">
