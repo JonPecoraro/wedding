@@ -9,101 +9,111 @@
 		<script th:src="@{/js/rsvp.js}"></script>
 	</section>
 	<div layout:fragment="content" th:inline="text">
-		<form id="addGuestForm" th:action="@{/rsvp/add-guest}" th:object="${guest}" method="post" class="form">	
-			<p th:if="${#fields.hasErrors('*')}" class="alert alert-danger">
-				There was a problem saving your RSVP information. Check the highlighted fields and try again.
-			</p>
-			<p th:if="${success}" class="alert alert-success">
-				We have received your RSVP. Thank you and we look forward to seeing you at the wedding.
-			</p>
-			<div class="card">
-				<div class="card-header">RSVP</div>
-				<div class="card-body">
-					<div class="row">
-						<div class="col-sm-5">
-							<label for="firstName">* First Name</label>
-							<input type="text" th:field="*{firstName}" th:class="${#fields.hasErrors('firstName') ? 'form-control border border-danger' : 'form-control'}" />
-							<p th:if="${#fields.hasErrors('firstName')}" th:errors="*{firstName}" class="text-danger"></p>
-						</div>
-						<div class="col-sm-5">
-							<label for="lastName">* Last Name</label>
-							<input type="text" th:field="*{lastName}" th:class="${#fields.hasErrors('lastName') ? 'form-control border border-danger' : 'form-control'}" />
-							<p th:if="${#fields.hasErrors('lastName')}" th:errors="*{lastName}" class="text-danger"></p>
-						</div>
-						<div class="col-sm-2">
-							<label for="suffix">Suffix</label>
-							<select th:field="*{suffix}" class="form-control">
-								<option
-									th:each="option : ${suffixOptions}"
-									th:value="${option}"
-									th:text="${option}"
-									th:selected="${option == selectedSuffix}" >
-								</option>
-							</select>
-						</div>
-					</div>
-					<div class="row py-5">
-						<div class="col-sm-6">
-							<label for="email">* Email</label>
-							<input type="email" th:field="*{email}" th:class="${#fields.hasErrors('email') ? 'form-control border border-danger' : 'form-control'}" />
-							<label for="sendVerificationEmail">Send me a verification email &nbsp;&nbsp;</label>
-							<div class="form-check-inline">
-									<input class="form-check-input" type="radio" name="sendVerificationEmail" id="sendVerificationEmail1" value="Yes" checked="checked" />
-									<label class="form-check-label" for="sendVerificationEmail1">Yes</label>
-								</div>
-								<div class="form-check-inline">
-									<input class="form-check-input" type="radio" name="sendVerificationEmail" id="sendVerificationEmail2" value="No" />
-									<label class="form-check-label" for="sendVerificationEmail2">No</label>
-								</div>
-							<p th:if="${#fields.hasErrors('email')}" th:errors="*{email}" class="text-danger"></p>
-						</div>
-						<div class="col-sm-6">
-							<label for="foodChoice1">* RSVP</label>
-							<div th:class="${#fields.hasErrors('rsvpResponse') ? 'border border-danger' : ''}">
-								<div class="form-check-inline">
-									<input class="form-check-input" type="radio" name="rsvpResponse" id="rsvpResponse1" value="Yes" />
-									<label class="form-check-label" for="rsvpResponse1">Accepts with pleasure</label>
-								</div>
-								<div class="form-check-inline">
-									<input class="form-check-input" type="radio" name="rsvpResponse" id="rsvpResponse2" value="No" />
-									<label class="form-check-label" for="rsvpResponse2">Declines with regret</label>
-								</div>
-								<p th:if="${#fields.hasErrors('rsvpResponse')}" th:errors="*{rsvpResponse}" class="text-danger"></p>
-							</div>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-sm-6">
-							<label for="foodChoice1">Meal Selection</label>
-							<div>
-								<div class="form-check-inline">
-									<input class="form-check-input" type="radio" name="foodChoice" id="foodChoice1" value="Chicken" />
-									<label class="form-check-label" for="foodChoice1">Chicken</label>
-								</div>
-								<div class="form-check-inline">
-									<input class="form-check-input" type="radio" name="foodChoice" id="foodChoice2" value="Fish" />
-									<label class="form-check-label" for="foodChoice2">Fish</label>
-								</div>
-							</div>
-						</div>
-						<div class="col-sm-6">
-							<label for="roomBlockYes">Do you plan to use the room block?</label>
-							<div>
-								<div class="form-check-inline">
-									<input class="form-check-input" type="radio" name="plansToUseRoomBlock" id="roomBlockYes" value="Yes" />
-									<label class="form-check-label" for="roomBlockYes">Yes</label>
-								</div>
-								<div class="form-check-inline">
-									<input class="form-check-input" type="radio" name="plansToUseRoomBlock" id="roomBlockNo" value="No" />
-									<label class="form-check-label" for="roomBlockNo">No</label>
-								</div>
-							</div>
-						</div>
-					</div>
-					<input type="hidden" th:field="*{id}" />
-					<button type="submit" class="btn btn-primary mt-4">RSVP</button>
+		<section id="rsvp">
+			<div class="row">
+				<div class="col-12">
+					<h1>RSVP</h1>
 				</div>
 			</div>
-		</form>
+			<div class="row">
+				<div class="col-12">
+					<form id="addGuestForm" th:action="@{/rsvp/add-guest}" th:object="${guest}" method="post" class="form">	
+						<p th:if="${#fields.hasErrors('*')}" class="alert alert-danger">
+							There was a problem saving your RSVP information. Check the highlighted fields and try again.
+						</p>
+						<p th:if="${success}" class="alert alert-success">
+							We have received your RSVP. Thank you and we look forward to seeing you at the wedding.
+						</p>
+						<div class="card">
+							<div class="card-body">
+								<div class="row">
+									<div class="col-sm-5">
+										<label for="firstName">* First Name</label>
+										<input type="text" th:field="*{firstName}" th:class="${#fields.hasErrors('firstName') ? 'form-control border border-danger' : 'form-control'}" />
+										<p th:if="${#fields.hasErrors('firstName')}" th:errors="*{firstName}" class="text-danger"></p>
+									</div>
+									<div class="col-sm-5">
+										<label for="lastName">* Last Name</label>
+										<input type="text" th:field="*{lastName}" th:class="${#fields.hasErrors('lastName') ? 'form-control border border-danger' : 'form-control'}" />
+										<p th:if="${#fields.hasErrors('lastName')}" th:errors="*{lastName}" class="text-danger"></p>
+									</div>
+									<div class="col-sm-2">
+										<label for="suffix">Suffix</label>
+										<select th:field="*{suffix}" class="form-control">
+											<option
+												th:each="option : ${suffixOptions}"
+												th:value="${option}"
+												th:text="${option}"
+												th:selected="${option == selectedSuffix}" >
+											</option>
+										</select>
+									</div>
+								</div>
+								<div class="row py-5">
+									<div class="col-sm-6">
+										<label for="email">* Email</label>
+										<input type="email" th:field="*{email}" th:class="${#fields.hasErrors('email') ? 'form-control border border-danger' : 'form-control'}" />
+										<label for="sendVerificationEmail">Send me a verification email &nbsp;&nbsp;</label>
+										<div class="form-check-inline">
+												<input class="form-check-input" type="radio" name="sendVerificationEmail" id="sendVerificationEmail1" value="Yes" checked="checked" />
+												<label class="form-check-label" for="sendVerificationEmail1">Yes</label>
+											</div>
+											<div class="form-check-inline">
+												<input class="form-check-input" type="radio" name="sendVerificationEmail" id="sendVerificationEmail2" value="No" />
+												<label class="form-check-label" for="sendVerificationEmail2">No</label>
+											</div>
+										<p th:if="${#fields.hasErrors('email')}" th:errors="*{email}" class="text-danger"></p>
+									</div>
+									<div class="col-sm-6">
+										<label for="foodChoice1">* RSVP</label>
+										<div th:class="${#fields.hasErrors('rsvpResponse') ? 'border border-danger' : ''}">
+											<div class="form-check-inline">
+												<input class="form-check-input" type="radio" name="rsvpResponse" id="rsvpResponse1" value="Yes" />
+												<label class="form-check-label" for="rsvpResponse1">Accepts with pleasure</label>
+											</div>
+											<div class="form-check-inline">
+												<input class="form-check-input" type="radio" name="rsvpResponse" id="rsvpResponse2" value="No" />
+												<label class="form-check-label" for="rsvpResponse2">Declines with regret</label>
+											</div>
+											<p th:if="${#fields.hasErrors('rsvpResponse')}" th:errors="*{rsvpResponse}" class="text-danger"></p>
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-sm-6">
+										<label for="foodChoice1">Meal Selection</label>
+										<div>
+											<div class="form-check-inline">
+												<input class="form-check-input" type="radio" name="foodChoice" id="foodChoice1" value="Chicken" />
+												<label class="form-check-label" for="foodChoice1">Chicken</label>
+											</div>
+											<div class="form-check-inline">
+												<input class="form-check-input" type="radio" name="foodChoice" id="foodChoice2" value="Fish" />
+												<label class="form-check-label" for="foodChoice2">Fish</label>
+											</div>
+										</div>
+									</div>
+									<div class="col-sm-6">
+										<label for="roomBlockYes">Do you plan to use the room block?</label>
+										<div>
+											<div class="form-check-inline">
+												<input class="form-check-input" type="radio" name="plansToUseRoomBlock" id="roomBlockYes" value="Yes" />
+												<label class="form-check-label" for="roomBlockYes">Yes</label>
+											</div>
+											<div class="form-check-inline">
+												<input class="form-check-input" type="radio" name="plansToUseRoomBlock" id="roomBlockNo" value="No" />
+												<label class="form-check-label" for="roomBlockNo">No</label>
+											</div>
+										</div>
+									</div>
+								</div>
+								<input type="hidden" th:field="*{id}" />
+								<button type="submit" class="btn btn-primary mt-4">RSVP</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</section>
 	</div>
 </html>
