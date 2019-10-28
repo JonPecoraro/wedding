@@ -17,6 +17,17 @@
 			</div>
 			<div class="row">
 				<div class="col-12">
+					<p class="alert alert-warning" role="alert">
+						<strong>A Special Note from Jonathan and Ashley:</strong><br />
+						Please fill out the RSVP form for each person listed on the invitation.
+						We want to make sure we have correct numbers and that you get the meal of your choice. All children are welcome
+						at the ceremony at Corpus Christi. If you will require child care services for the reception, please visit the
+						<a th:href="@{/extras/#child-care}">child care</a> tab under extras for some reputable babysitters we found.
+					</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-12">
 					<form id="addGuestForm" th:action="@{/rsvp/add-guest}" th:object="${guest}" method="post" class="form">	
 						<p th:if="${#fields.hasErrors('*')}" class="alert alert-danger">
 							There was a problem saving your RSVP information. Check the highlighted fields and try again.
@@ -24,6 +35,28 @@
 						<p th:if="${success}" class="alert alert-success">
 							We have received your RSVP. Thank you and we look forward to seeing you at the wedding.
 						</p>
+						<div th:if="${sesFailure}" class="alert alert-warning">
+							<p>
+								We were unable to send a confirmation to the email address provided, but your RSVP information has been successfully recorded.
+								If you would like to confirm, you can contact us directly.
+							</p>
+							<ul class="text-left">
+								<li>
+									Jonathan
+									<ol>
+										<li>Call or text: <a href="tel:386-451-2358">386-451-2358</a></li>
+										<li>Email: <a href="mailto:JonPecoraro@gmail.com?Subject=Wedding%20Website%20Error">JonPecoraro@gmail.com</a></li>
+									</ol>
+								</li>
+								<li>
+									Ashley
+									<ol>
+										<li>Call or text: <a href="tel:859-663-6338">859-663-6338</a></li>
+										<li>Email: <a href="mailto:AshleyWill283@gmail.com?Subject=Wedding%20Website%20Error">AshleyWill283@gmail.com</a></li>
+									</ol>
+								</li>
+							</ul>
+						</div>
 						<div class="card">
 							<div class="card-body">
 								<div class="row">

@@ -55,6 +55,9 @@ dependencies {
 	// AWS SES for sending emails
 	compile 'com.amazonaws:aws-java-sdk-ses'
 	
+	// Paypal SDK
+	compile 'com.paypal.sdk:rest-api-sdk:+'
+	
 	// webjars
 	compile 'org.webjars:bootstrap:4.3.1'
 	compile 'org.webjars.bower:jquery:3.3.1'

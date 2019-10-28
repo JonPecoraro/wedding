@@ -2,6 +2,8 @@ package com.wedding.controller;
 
 import javax.validation.Valid;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -22,6 +24,7 @@ import com.wedding.util.SmsUtil;
 @Controller
 @RequestMapping(value = {"/rsvp"}, produces = "application/json")
 public class RsvpController {
+	private static final Logger logger = LoggerFactory.getLogger(RsvpController.class);
 	private final String YES_RESPONSE = "Yes";
 	private final String NO_RESPONSE = "No";
 	
@@ -68,13 +71,19 @@ public class RsvpController {
 				}
 				if (guest.getPlansToUseRoomBlock() != null) {
 					if (guest.getPlansToUseRoomBlock().equalsIgnoreCase(YES_RESPONSE)) {
-						emailMessage += " We appreciate your interest in the room blcok. See you at the resort!";
+						emailMessage += " We appreciate your interest in the room block. See you at the resort!";
 					} else {
 						emailMessage += " We see that you're not planning to use the room block. That's okay. There's a ton of great places to stay in the area. See you at the wedding!";
 					}
 				}
 			}
-			SesUtil.sendEmail(guest.getEmail(), emailMessage);
+			try
+			{
+				SesUtil.sendEmail(guest.getEmail(), emailMessage);
+			} catch(Exception e) {
+				logger.error("SES message failed to send: {}", e);
+				redirectAttributes.addFlashAttribute("sesFailure", guest);
+			}
 		}
 		
 		return "redirect:/rsvp";
