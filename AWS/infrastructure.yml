@@ -1,0 +1,67 @@
+# pre-requsites:
+#    1. There must be a keypair named weddingWebsiteKeyPair
+# Result: An EC2 instance will be created in the Ohio us-east-2 region
+Resources:
+  WebsiteEC2Instance:
+    Type: AWS::EC2::Instance
+    Properties:
+      InstanceType: t2.nano
+      ImageId: ami-0b69ea66ff7391e80
+      SecurityGroupIds:
+        - !Ref WebDMZSecurityGroup
+      Tags:
+        - Key: Name
+          Value: WebServer
+      KeyName: weddingWebsiteKeyPair
+  AnsibleEC2Instance:
+    Type: AWS::EC2::Instance
+    Properties:
+      InstanceType: t2.nano
+      ImageId: ami-0b69ea66ff7391e80
+      SecurityGroupIds:
+        - !Ref SSHSecurityGroup
+      Tags:
+        - Key: Name
+          Value: AnsibleServer
+      KeyName: weddingWebsiteKeyPair
+ # RsvpSNSTopic:
+ #   Type: AWS::SNS::Topic
+ #   Properties:
+ #     TopicName: wedding
+ #     DisplayName: wedding
+ #     Subscription: 
+ #       - Endpoint: JonPecoraro@gmail.com
+ #         Protocol: email
+ #       - Endpoint: "+13864512358"
+ #         Protocol: sms
+  WebDMZSecurityGroup:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupDescription: Open Ports 22, 80, and 443
+      SecurityGroupIngress:
+      - IpProtocol: tcp
+        FromPort: '22'
+        ToPort: '22'
+        CidrIp: 0.0.0.0/0
+      - IpProtocol: tcp
+        FromPort: '80'
+        ToPort: '80'
+        CidrIp: 0.0.0.0/0
+      - IpProtocol: tcp
+        FromPort: '443'
+        ToPort: '443'
+        CidrIp: 0.0.0.0/0
+      - IpProtocol: tcp
+        FromPort: '5432'
+        ToPort: '5432'
+        CidrIp: 0.0.0.0/0
+  SSHSecurityGroup:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupDescription: Open Port 22
+      SecurityGroupIngress:
+      - IpProtocol: tcp
+        FromPort: '22'
+        ToPort: '22'
+        CidrIp: 0.0.0.0/0
+      
