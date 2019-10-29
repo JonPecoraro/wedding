@@ -17,20 +17,17 @@ public class AdminController {
 	@Autowired GuestbookRepository guestbookRepository;
 	
 	@GetMapping("")
-	@PreAuthorize("hasAuthority('Wedding Admins')")
     public String index() {
 		return "admin/index";
     }
 	
 	@GetMapping("/guest-list")
-	@PreAuthorize("hasAuthority('Wedding Admins')")
 	public String showGuestRsvpList(Model model) {
 		model.addAttribute("guests", guestRepository.findAll());
 		return "admin/guest-list";
 	}
 	
 	@GetMapping("/guestbook")
-	@PreAuthorize("hasAuthority('Wedding Admins')")
 	public String showGuestbookEntries(Model model) {
 		model.addAttribute("guestbook", guestbookRepository.findAll());
 		return "admin/guestbook";
