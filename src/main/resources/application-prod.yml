@@ -16,10 +16,6 @@ okta:
     issuer: https://dev-333885.oktapreview.com/oauth2/default
     clientId: {OKTA_APP_CLIENT_ID}
     clientSecret: {OKTA_APP_CLIENT_SECRET}
-
-paypal:
-  oauth2:
-    clientId: {PAYPAL_APP_CLIENT_ID}
     
 sns:
   topic:
