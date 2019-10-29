@@ -3,6 +3,7 @@ HELP.md
 /bin/
 /build/
 /temp/
+/ansible/
 !gradle/wrapper/gradle-wrapper.jar
 /src/main/resources/application-local.yml
 
