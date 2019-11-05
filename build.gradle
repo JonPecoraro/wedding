@@ -27,8 +27,6 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
 	compile 'nz.net.ultraq.thymeleaf:thymeleaf-layout-dialect:2.3.0'
-	compile 'org.thymeleaf.extras:thymeleaf-extras-springsecurity5'
-	implementation 'org.springframework.security.oauth.boot:spring-security-oauth2-autoconfigure:2.0.5.RELEASE'
 	
 	// Devtools
 	runtimeOnly 'org.springframework.boot:spring-boot-devtools'
@@ -42,12 +40,6 @@ dependencies {
 	// Google libraries
 	compile 'com.google.code.gson:gson:2.8.5'
 	compile 'com.google.guava:guava:12.0'
-	
-	// Okta
-	implementation 'com.okta.spring:okta-spring-boot-starter:1.1.0'
-	compile 'com.okta.spring:okta-spring-sdk:1.0.0'
-	runtime 'com.okta.sdk:okta-sdk-impl:1.0.0'
-	runtime 'com.okta.sdk:okta-sdk-httpclient:1.0.0'
 	
 	// AWS SNS for sending text messages
 	compile 'com.amazonaws:aws-java-sdk-sns'
