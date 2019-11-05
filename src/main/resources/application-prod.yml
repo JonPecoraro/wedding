@@ -7,15 +7,6 @@ spring:
     properties:
       hibernate:
         jdbc.lob.non_contextual_creation: true
-
-okta:
-  client:
-    token: ${OKTA_API_TOKEN}
-    orgUrl: https://dev-333885.oktapreview.com
-  oauth2:
-    issuer: https://dev-333885.oktapreview.com/oauth2/default
-    clientId: ${OKTA_APP_CLIENT_ID}
-    clientSecret: ${OKTA_APP_CLIENT_SECRET}
     
 sns:
   topic:
