@@ -9,39 +9,74 @@
 		<script th:src="@{/js/admin.js}"></script>
 	</section>
 	<div layout:fragment="content" th:inline="text">
-	     <!--/* displayed if account IS NOT null, indicating that the user IS logged in */-->
-	     <div>
-		    <div class="row">
-		        <div class="col-12">
-	                <div th:if="${not #lists.isEmpty(guestbook)}">
-						<table id="guestbookTable" class="table display">
-							<thead>
-								<tr>
-									<th scope="col">Name</th>
-									<th scope="col">Message</th>
-									<th scope="col">Message Date</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr th:each="entry : ${guestbook}">
-									<td>[[${entry.name}]]</td>
-									<td>[[${entry.message}]]</td>
-									<td>[[${entry.dateCreated}]]</td>
-								</tr>
-							</tbody>
-						</table>
-		            </div>
-		            <div th:if="${#lists.isEmpty(guestbook)}">
-		            	<p>No guestbook entries have been made yet</p>
-		            </div>
-		        </div>
-		    </div>
-		    <div class="row">
-		    	<div class="col-12">
-		    		<hr />
-		    		<a th:href="@{/admin}">Back to Admin Home page</a>
-		    	</div>
-		    </div>
+	    <div class="row">
+	        <div class="col-12">
+                <div th:if="${not #lists.isEmpty(guestbook)}">
+					<table id="guestbookTable" class="table display">
+						<thead>
+							<tr>
+								<th scope="col">Name</th>
+								<th scope="col">Message</th>
+								<th scope="col">Message Date</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr th:each="entry : ${guestbook}">
+								<td>
+									<a href="#" class="guestbook-entry-link" th:id="${entry.id}"
+										data-th-name="${entry.name}"
+										data-th-message="${entry.message}"
+										data-th-date-created="${entry.dateCreated}">
+										[[${entry.name}]]
+									</a>
+								</td>
+								<td>[[${entry.message}]]</td>
+								<td>[[${entry.dateCreated}]]</td>
+							</tr>
+						</tbody>
+					</table>
+	            </div>
+	            <div th:if="${#lists.isEmpty(guestbook)}">
+	            	<p>No guestbook entries have been made yet</p>
+	            </div>
+	        </div>
 	    </div>
+	    <div class="row">
+	    	<div class="col-12">
+	    		<hr />
+	    		<a th:href="@{/admin}">Back to Admin Home page</a>
+	    	</div>
+	    </div>
+	    
+	    <!-- Edit entry modal -->
+		<div class="modal fade" id="ediEntrytModal" tabindex="-1" role="dialog" aria-labelledby="ediEntrytModalTitle" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="ediEntrytModalTitle">Edit Entry</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<form id="updateEntryForm" method="post">
+							<div class="form-group">
+								<label for="name">Name</label>
+								<input type="text" class="form-control" id="name" name="name">
+							</div>
+							<div class="form-group">
+								<label for="message">Message</label>
+								<input type="text" class="form-control" id="message" name="message">
+							</div>
+							<input type="hidden" id="entryId" />
+						</form>
+					</div>
+					<div class="modal-footer">
+						<button type="button" id="deleteEntryBtn" class="btn btn-secondary mr-auto">Delete</button>
+						<button type="button" id="updateEntryBtn" class="btn btn-primary">Save</button>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
 </html>
