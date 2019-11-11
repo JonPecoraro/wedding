@@ -25,7 +25,18 @@
 							</thead>
 							<tbody>
 								<tr th:each="guest : ${guests}">
-									<td>[[${guest.firstName}]] [[${guest.lastName}]] [[guest.suffix]]</td>
+									<td>
+										<a href="#" class="guest-link" th:id="${guest.id}"
+											data-th-first-name="${guest.firstName}"
+											data-th-last-name="${guest.lastName}"
+											data-th-suffix="${guest.suffix}"
+											data-th-email="${guest.email}"
+											data-th-rsvp-response="${guest.rsvpResponse}"
+											data-th-food-choice="${guest.foodChoice}"
+											data-th-plans-to-use-room-block="${guest.plansToUseRoomBlock}">
+											[[${guest.firstName}]] [[${guest.lastName}]] [[${guest.suffix}]]
+										</a>
+									</td>
 									<td>[[${guest.rsvpResponse}]]</td>
 									<td>[[${guest.foodChoice}]]</td>
 									<td>[[${guest.plansToUseRoomBlock}]]</td>
@@ -45,5 +56,56 @@
 		    	</div>
 		    </div>
 	    </div>
+	    
+	    <!-- Edit guest modal -->
+		<div class="modal fade" id="editGuestModal" tabindex="-1" role="dialog" aria-labelledby="editGuestModalTitle" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="editGuestModalTitle">Edit Guest</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<form id="updateGuestForm" method="post">
+							<div class="form-group">
+								<label for="firstName">First Name</label>
+								<input type="text" class="form-control" id="firstName" name="firstName">
+							</div>
+							<div class="form-group">
+								<label for="lastName">Last Name</label>
+								<input type="text" class="form-control" id="lastName" name="lastName">
+							</div>
+							<div class="form-group">
+								<label for="suffix">Suffix</label>
+								<input type="text" class="form-control" id="suffix" name="suffix">
+							</div>
+							<div class="form-group">
+								<label for="email">Email address</label>
+								<input type="email" class="form-control" id="email" name="email">
+							</div>
+							<div class="form-group">
+								<label for="rsvpResponse">RSVP Response</label>
+								<input type="text" class="form-control" id="rsvpResponse" name="rsvpResponse">
+							</div>
+							<div class="form-group">
+								<label for="foodChoice">Food Choice</label>
+								<input type="text" class="form-control" id="foodChoice" name="foodChoice">
+							</div>
+							<div class="form-group">
+								<label for="plansToUseRoomBlock">Plans to Use Room Block</label>
+								<input type="text" class="form-control" id="plansToUseRoomBlock" name="plansToUseRoomBlock">
+							</div>
+							<input type="hidden" id="guestId" />
+						</form>
+					</div>
+					<div class="modal-footer">
+						<button type="button" id="deleteGuestBtn" class="btn btn-secondary mr-auto">Delete</button>
+						<button type="button" id="updateGuestBtn" class="btn btn-primary">Save</button>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
 </html>
