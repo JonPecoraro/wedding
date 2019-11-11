@@ -6,13 +6,13 @@
 */
 
 body {
-	font-family: 'Playfair Display', serif;
+	font-family: 'Playfair Display', 'Great Vibes', Helvetica, serif;
 	font-size: 1.1em;
 	background-color: #FCFCFC;
 }
 
 #nav, h1 {
-	font-family: 'Great Vibes', Helvetica, sans-serif;
+	font-family: 'Great Vibes', Helvetica, serif;
 }
 
 #nav {
