@@ -39,6 +39,7 @@ $(function() {
 		$('#entryId').val($this.attr('id'));
 		$('#name').val($this.attr('name'));
 		$('#message').val($this.attr('message'));
+		$('#privateMessage').val($this.attr('private-message'));
 		$('#ediEntrytModal').modal();
 	});
 	

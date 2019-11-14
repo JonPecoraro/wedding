@@ -18,13 +18,13 @@ public class ExtrasController {
 	
 	@GetMapping("")
     public String getExtras(Model model) {
-		model.addAttribute("guestbookEntries", guestbookRepository.findAllByOrderByDateCreatedDesc());
+		model.addAttribute("guestbookEntries", guestbookRepository.findAllByPrivateMessageFalseOrderByDateCreatedDesc());
         return "extras";
     }
 	
 	@GetMapping("/saveGuestbookMessage")
 	@ResponseBody
-	public Guestbook saveGuestbookMessage(String name, String message) {
+	public Guestbook saveGuestbookMessage(String name, String message, boolean privateMessage) {
 		if (!Strings.isNullOrEmpty(name) && !Strings.isNullOrEmpty(message)) {
 			// Ensure the values will fit into the database
 			name = trimString(name, 255);
@@ -32,6 +32,7 @@ public class ExtrasController {
 			
 			// Save the guestbook entry
 			Guestbook guestbookEntry = new Guestbook(name, message);
+			guestbookEntry.setPrivateMessage(privateMessage);
 			guestbookRepository.save(guestbookEntry);
 			
 			return guestbookEntry;

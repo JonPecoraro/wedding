@@ -23,5 +23,6 @@ CREATE TABLE "public"."guestbook" (
 	"id" SERIAL PRIMARY KEY NOT NULL,
 	"name" VARCHAR(255)  NOT NULL,
 	"message" VARCHAR(4095)  NOT NULL,
+	"private_message" BOOL DEFAULT FALSE,
 	"date_created" TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL
 ) WITH OIDS;
