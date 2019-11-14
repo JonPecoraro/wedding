@@ -60,11 +60,12 @@ public class AdminController {
 	}
 	
 	@PostMapping("/edit-guestbook-entry/{id}")
-	public String editGuestbookEntry(String name, String message, @PathVariable int id) {
+	public String editGuestbookEntry(String name, String message, boolean privateMessage, @PathVariable int id) {
 		guestbookRepository.findById(id)
 			.map(entry -> {
 				entry.setMessage(message);
 				entry.setName(name);
+				entry.setPrivateMessage(privateMessage);
 				return guestbookRepository.save(entry);
 			})
 			.orElseGet(() -> {

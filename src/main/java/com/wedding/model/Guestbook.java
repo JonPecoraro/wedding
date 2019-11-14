@@ -15,6 +15,7 @@ public class Guestbook {
 	private int id;
 	private String name;
 	private String message;
+	private boolean privateMessage;
 	private Timestamp dateCreated;
 	
 	public Guestbook() {}
@@ -53,6 +54,14 @@ public class Guestbook {
 		return dateCreated;
 	}
 	
+	public boolean isPrivateMessage() {
+		return privateMessage;
+	}
+
+	public void setPrivateMessage(boolean privateMessage) {
+		this.privateMessage = privateMessage;
+	}
+	
 	public Date getDateCreatedWithoutTime() {
 		return new Date(dateCreated.getTime());
 	}
@@ -63,6 +72,7 @@ public class Guestbook {
 
 	@Override
 	public String toString() {
-		return "Guestbook [id=" + id + ", name=" + name + ", message=" + message + ", dateCreated=" + dateCreated + "]";
+		return "Guestbook [id=" + id + ", name=" + name + ", message=" + message + ", privateMessage=" + privateMessage
+				+ ", dateCreated=" + dateCreated + "]";
 	}
 }

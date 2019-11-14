@@ -8,7 +8,8 @@ $(function() {
 				url: '/extras/saveGuestbookMessage',
 				data: {
 					name: $('#name').val(),
-					message: $('#message').val()
+					message: $('#message').val(),
+					privateMessage: $('#privateMessage').is(':checked')
 				}
 			}).done(function(guestbookMessage) {
 				var $guestbookMessages = $('#guestbookMessages');
@@ -17,6 +18,13 @@ $(function() {
 					.find('.date').text(guestbookMessage.dateCreatedWithoutTime).end()
 					.find('.name').text(guestbookMessage.name).end()
 					.find('.message').text(guestbookMessage.message).end();
+				
+				if (guestbookMessage.privateMessage) {
+					$message
+						.find('.message').parent().prepend($('<div class="col-12">PRIVATE</div>')).end().end()
+						.addClass('alert-warning')
+						.css('backgroundColor', '#fff3cd');
+				}
 				
 				$guestbookMessages.find('ul').prepend($message);
 				
@@ -34,4 +42,5 @@ $(function() {
 	});
 	
 	baguetteBox.run('.photo-gallery');
+	$('[data-toggle="tooltip"]').tooltip();
 });
