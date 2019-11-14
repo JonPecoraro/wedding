@@ -9,5 +9,5 @@ import com.wedding.model.Guestbook;
 //This will be AUTO IMPLEMENTED by Spring
 
 public interface GuestbookRepository extends CrudRepository<Guestbook, Integer> {
-	Set<Guestbook> findAllByOrderByDateCreatedDesc();
+	Set<Guestbook> findAllByPrivateMessageFalseOrderByDateCreatedDesc();
 }
