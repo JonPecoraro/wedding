@@ -41,6 +41,6 @@ $(function() {
 		}
 	});
 	
+	$('#private-message-info').tooltip();
 	baguetteBox.run('.photo-gallery');
-	$('[data-toggle="tooltip"]').tooltip();
 });
