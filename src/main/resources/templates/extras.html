@@ -2,11 +2,11 @@
 <html  xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorator="layouts/default">
 	<head>
 		<link media="all" rel="stylesheet" th:href="@{/webjars/jquery-ui/1.12.1/jquery-ui.min.css}" />
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.0/baguetteBox.min.css">
 		<link media="all" rel="stylesheet" th:href="@{/css/extras.css}" />
 	</head>
 	<section layout:fragment="additionalScripts">
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.0/baguetteBox.min.js"></script>
 		<script th:src="@{/js/extras.js}"></script>
 	</section>
 	<div layout:fragment="content" th:inline="text">
@@ -111,7 +111,7 @@
 									</div>
 									<div id="disney-collapse" class="collapse" aria-labelledby="disney-header" data-parent="#things-to-do-accordion">
 										<div class="card-body text-left">
-											<img th:src="@{/img/things-to-do/disney-world.png}" class="rounded img-thumbnail" alt="Cinderella's Castle at Magic Kingdom" />
+											<img th:src="@{/img/things-to-do/disney-world.jpg}" class="rounded img-thumbnail" alt="Cinderella's Castle at Magic Kingdom" />
 											<p class="pt-3">
 												<a href="https://disneyworld.disney.go.com" target="_blank">Disney World</a> offers 4 theme parks and 2 water parks. In addition to the parks Disney Springs is an outdoor shopping, dining, and entertainment complex
 												with a lot to do for both adults and kids.
@@ -559,7 +559,7 @@
 									<input class="form-check-input" type="checkbox" id="privateMessage" value="true">
 									<label class="form-check-label" for="privateMessage">Private Message</label>
 									&nbsp;&nbsp;&nbsp;
-									<button type="button" id="btn-info" class="btn btn-secondary" data-toggle="tooltip"  data-placement="right" title="When Private Message is checked, only Jonathan and Ashley will see your message.">i</button>
+									<span id="private-message-info" class="badge badge-secondary" data-toggle="tooltip"  data-placement="right" title="When Private Message is checked, only Jonathan and Ashley will see your message.">i</span>
 								</div>
 								<input type="text" id="protection" class="d-none" />
 								<br clear="all" />
@@ -598,29 +598,29 @@
 									<div class="col-sm-6 col-md-4">
 										<div class="thumbnail">
 											<a class="lightbox" href="https://clients.sophiasartphotography.com/ashley-and-jonathan-engagement" target="_blank">
-												<img th:src="@{/img/gallery/engagement-photo.jpg}" class="rounded img-thumbnail" alt="Engagement Photos">
+												<img th:src="@{/img/gallery/thumbnail/engagement-photo.jpg}" class="rounded img-thumbnail" alt="Engagement Photos">
 											</a>
 											<div class="caption">
 												<h3>Engagement Photos</h3>
-												<p>Checkout the album of engagement photos we took at Disney's Boardwalk.</p>
+												<p>Check out the album of engagement photos we took at Disney's Boardwalk.</p>
 											</div>
 										</div>
 									</div>
 									<div class="col-sm-6 col-md-4">
 										<div class="thumbnail">
-											<a class="lightbox" th:href="@{/img/gallery/cake-on-shirt.jpg}">
-												<img th:src="@{/img/gallery/cake-on-shirt.jpg}" class="rounded img-thumbnail" alt="Cake on shirt at Aubrey birthday">
+											<a class="lightbox" th:href="@{/img/gallery/angelas-christmas-party.jpg}">
+												<img th:src="@{/img/gallery/thumbnail/angelas-christmas-party.jpg}" class="rounded img-thumbnail" alt="Photo Album from Regular Life">
 											</a>
 											<div class="caption">
-												<h3>Aubrey's 1st Birthday</h3>
-												<p>Aubrey wasn't sure what to do with the cake...so she wiped it all over Jonathan.</p>
+												<h3>Christmas Party</h3>
+												<p>Having a great time at Angela Kruck's Christmas party.</p>
 											</div>
 										</div>
 									</div>
 									<div class="col-sm-6 col-md-4">
 										<div class="thumbnail">
 											<a class="lightbox" th:href="@{/img/gallery/beautiful-view.jpg}">
-												<img th:src="@{/img/gallery/beautiful-view.jpg}" class="rounded img-thumbnail" alt="Beautiful view">
+												<img th:src="@{/img/gallery/thumbnail/beautiful-view.jpg}" class="rounded img-thumbnail" alt="Beautiful view">
 											</a>
 											<div class="caption">
 												<h3>St. Thomas</h3>
@@ -631,7 +631,7 @@
 									<div class="col-sm-6 col-md-4">
 										<div class="thumbnail">
 											<a class="lightbox" th:href="@{/img/gallery/engaged.jpg}">
-												<img th:src="@{/img/gallery/engaged.jpg}" class="rounded img-thumbnail" alt="Engaged">
+												<img th:src="@{/img/gallery/thumbnail/engaged.jpg}" class="rounded img-thumbnail" alt="Engaged">
 											</a>
 											<div class="caption">
 												<h3>Engagement Fireworks</h3>
@@ -642,7 +642,7 @@
 									<div class="col-sm-6 col-md-4">
 										<div class="thumbnail">
 											<a class="lightbox" th:href="@{/img/gallery/ring.jpg}">
-												<img th:src="@{/img/gallery/ring.jpg}" class="rounded img-thumbnail" alt="Ring">
+												<img th:src="@{/img/gallery/thumbnail/ring.jpg}" class="rounded img-thumbnail" alt="Ring">
 											</a>
 											<div class="caption">
 												<h3>The Ring</h3>
@@ -653,7 +653,7 @@
 									<div class="col-sm-6 col-md-4">
 										<div class="thumbnail">
 											<a class="lightbox" th:href="@{/img/gallery/epcot.jpg}">
-												<img th:src="@{/img/gallery/epcot.jpg}" class="rounded img-thumbnail" alt="Epcot">
+												<img th:src="@{/img/gallery/thumbnail/epcot.jpg}" class="rounded img-thumbnail" alt="Epcot">
 											</a>
 											<div class="caption">
 												<h3>Epcot</h3>
@@ -664,7 +664,7 @@
 									<div class="col-sm-6 col-md-4">
 										<div class="thumbnail">
 											<a class="lightbox" th:href="@{/img/gallery/great-inflatable-race.jpg}">
-												<img th:src="@{/img/gallery/great-inflatable-race.jpg}" class="rounded img-thumbnail" alt="Great Inflatable Race">
+												<img th:src="@{/img/gallery/thumbnail/great-inflatable-race.jpg}" class="rounded img-thumbnail" alt="Great Inflatable Race">
 											</a>
 											<div class="caption">
 												<h3>The Great Inflatable Race</h3>
@@ -675,7 +675,7 @@
 									<div class="col-sm-6 col-md-4">
 										<div class="thumbnail">
 											<a class="lightbox" th:href="@{/img/gallery/big-thunder-mountain.jpg}">
-												<img th:src="@{/img/gallery/big-thunder-mountain.jpg}" class="rounded img-thumbnail" alt="Big Thunder Mountain">
+												<img th:src="@{/img/gallery/thumbnail/big-thunder-mountain.jpg}" class="rounded img-thumbnail" alt="Big Thunder Mountain">
 											</a>
 											<div class="caption">
 												<h3>Fiona's Disney Trip</h3>
@@ -685,19 +685,8 @@
 									</div>
 									<div class="col-sm-6 col-md-4">
 										<div class="thumbnail">
-											<a class="lightbox" th:href="@{/img/gallery/hoop-de-doo.jpg}">
-												<img th:src="@{/img/gallery/hoop-de-doo.jpg}" class="rounded img-thumbnail" alt="Hoop-de-doo">
-											</a>
-											<div class="caption">
-												<h3>Hoop-Dee-Doo</h3>
-												<p>Ashley and Jonathan enjoying the Hoop-Dee-Doo Musical Revue dinner show for their friend Michelle's birthday.</p>
-											</div>
-										</div>
-									</div>
-									<div class="col-sm-6 col-md-4">
-										<div class="thumbnail">
 											<a class="lightbox" th:href="@{/img/gallery/engagement-toast.jpg}">
-												<img th:src="@{/img/gallery/engagement-toast.jpg}" class="rounded img-thumbnail" alt="Engagement toast">
+												<img th:src="@{/img/gallery/thumbnail/engagement-toast.jpg}" class="rounded img-thumbnail" alt="Engagement toast">
 											</a>
 											<div class="caption">
 												<h3>Engagement Toast</h3>
@@ -708,7 +697,7 @@
 									<div class="col-sm-6 col-md-4">
 										<div class="thumbnail">
 											<a class="lightbox" th:href="@{/img/gallery/engagement-seeing-family.jpg}">
-												<img th:src="@{/img/gallery/engagement-seeing-family.jpg}" class="rounded img-thumbnail" alt="Engagement seeing family">
+												<img th:src="@{/img/gallery/thumbnail/engagement-seeing-family.jpg}" class="rounded img-thumbnail" alt="Engagement seeing family">
 											</a>
 											<div class="caption">
 												<h3>Ugly Cry</h3>
@@ -719,7 +708,7 @@
 									<div class="col-sm-6 col-md-4">
 										<div class="thumbnail">
 											<a class="lightbox" th:href="@{/img/gallery/engagement-family-photo.jpg}">
-												<img th:src="@{/img/gallery/engagement-family-photo.jpg}" class="rounded img-thumbnail" alt="Engagement family photo">
+												<img th:src="@{/img/gallery/thumbnail/engagement-family-photo.jpg}" class="rounded img-thumbnail" alt="Engagement family photo">
 											</a>
 											<div class="caption">
 												<h3>Family Engagement Photo</h3>
@@ -730,7 +719,7 @@
 									<div class="col-sm-6 col-md-4">
 										<div class="thumbnail">
 											<a class="lightbox" th:href="@{/img/gallery/evansville-with-alex.jpg}">
-												<img th:src="@{/img/gallery/evansville-with-alex.jpg}" class="rounded img-thumbnail" alt="University of Evansville with Alex">
+												<img th:src="@{/img/gallery/thumbnail/evansville-with-alex.jpg}" class="rounded img-thumbnail" alt="University of Evansville with Alex">
 											</a>
 											<div class="caption">
 												<h3>Evansville</h3>
@@ -741,7 +730,7 @@
 									<div class="col-sm-6 col-md-4">
 										<div class="thumbnail">
 											<a class="lightbox" th:href="@{/img/gallery/magic-kingdom.jpg}">
-												<img th:src="@{/img/gallery/magic-kingdom.jpg}" class="rounded img-thumbnail" alt="Magic Kingdom">
+												<img th:src="@{/img/gallery/thumbnail/magic-kingdom.jpg}" class="rounded img-thumbnail" alt="Magic Kingdom">
 											</a>
 											<div class="caption">
 												<h3>Magic Kingdom</h3>
@@ -752,7 +741,7 @@
 									<div class="col-sm-6 col-md-4">
 										<div class="thumbnail">
 											<a class="lightbox" th:href="@{/img/gallery/visit-with-steph.jpg}">
-												<img th:src="@{/img/gallery/visit-with-steph.jpg}" class="rounded img-thumbnail" alt="Visit With Steph">
+												<img th:src="@{/img/gallery/thumbnail/visit-with-steph.jpg}" class="rounded img-thumbnail" alt="Visit With Steph">
 											</a>
 											<div class="caption">
 												<h3>Visit from Stephanie</h3>
@@ -763,7 +752,7 @@
 									<div class="col-sm-6 col-md-4">
 										<div class="thumbnail">
 											<a class="lightbox" th:href="@{/img/gallery/food-and-wine.jpg}">
-												<img th:src="@{/img/gallery/food-and-wine.jpg}" class="rounded img-thumbnail" alt="Food and Wine 2018">
+												<img th:src="@{/img/gallery/thumbnail/food-and-wine.jpg}" class="rounded img-thumbnail" alt="Food and Wine 2018">
 											</a>
 											<div class="caption">
 												<h3>Food and Wine Festival</h3>
@@ -774,7 +763,7 @@
 									<div class="col-sm-6 col-md-4">
 										<div class="thumbnail">
 											<a class="lightbox" th:href="@{/img/gallery/ibr-cruise.jpg}">
-												<img th:src="@{/img/gallery/ibr-cruise.jpg}" class="rounded img-thumbnail" alt="IBR cruise 2018">
+												<img th:src="@{/img/gallery/thumbnail/ibr-cruise.jpg}" class="rounded img-thumbnail" alt="IBR cruise 2018">
 											</a>
 											<div class="caption">
 												<h3>IBR cruise</h3>
@@ -785,7 +774,7 @@
 									<div class="col-sm-6 col-md-4">
 										<div class="thumbnail">
 											<a class="lightbox" th:href="@{/img/gallery/ibr-cruise-2.jpg}">
-												<img th:src="@{/img/gallery/ibr-cruise-2.jpg}" class="rounded img-thumbnail" alt="IBR cruise 2018 outside ship">
+												<img th:src="@{/img/gallery/thumbnail/ibr-cruise-2.jpg}" class="rounded img-thumbnail" alt="IBR cruise 2018 outside ship">
 											</a>
 											<div class="caption">
 												<h3>Chillin' by the ship</h3>
@@ -796,7 +785,7 @@
 									<div class="col-sm-6 col-md-4">
 										<div class="thumbnail">
 											<a class="lightbox" th:href="@{/img/gallery/ibr-cruise-formal-night.jpg}">
-												<img th:src="@{/img/gallery/ibr-cruise-formal-night.jpg}" class="rounded img-thumbnail" alt="IBR cruise 2018 formal night">
+												<img th:src="@{/img/gallery/thumbnail/ibr-cruise-formal-night.jpg}" class="rounded img-thumbnail" alt="IBR cruise 2018 formal night">
 											</a>
 											<div class="caption">
 												<h3>Formal Night</h3>
@@ -807,7 +796,7 @@
 									<div class="col-sm-6 col-md-4">
 										<div class="thumbnail">
 											<a class="lightbox" th:href="@{/img/gallery/ibr-cruise-formal-night-formal-picture.jpg}">
-												<img th:src="@{/img/gallery/ibr-cruise-formal-night-formal-picture.jpg}" class="rounded img-thumbnail" alt="IBR cruise 2018 professional picture">
+												<img th:src="@{/img/gallery/thumbnail/ibr-cruise-formal-night-formal-picture.jpg}" class="rounded img-thumbnail" alt="IBR cruise 2018 professional picture">
 											</a>
 											<div class="caption">
 												<h3>Professional Photo</h3>
@@ -818,7 +807,7 @@
 									<div class="col-sm-6 col-md-4">
 										<div class="thumbnail">
 											<a class="lightbox" th:href="@{/img/gallery/visit-with-texas-family.jpg}">
-												<img th:src="@{/img/gallery/visit-with-texas-family.jpg}" class="rounded img-thumbnail" alt="Visit with Texas family">
+												<img th:src="@{/img/gallery/thumbnail/visit-with-texas-family.jpg}" class="rounded img-thumbnail" alt="Visit with Texas family">
 											</a>
 											<div class="caption">
 												<h3>Cousins at Disney</h3>
@@ -829,7 +818,7 @@
 									<div class="col-sm-6 col-md-4">
 										<div class="thumbnail">
 											<a class="lightbox" th:href="@{/img/gallery/fun-date.jpg}">
-												<img th:src="@{/img/gallery/fun-date.jpg}" class="rounded img-thumbnail" alt="Fun date">
+												<img th:src="@{/img/gallery/thumbnail/fun-date.jpg}" class="rounded img-thumbnail" alt="Fun date">
 											</a>
 											<div class="caption">
 												<h3>Voodoo Doughnuts</h3>
@@ -840,7 +829,7 @@
 									<div class="col-sm-6 col-md-4">
 										<div class="thumbnail">
 											<a class="lightbox" th:href="@{/img/gallery/another-wedding.jpg}">
-												<img th:src="@{/img/gallery/another-wedding.jpg}" class="rounded img-thumbnail" alt="Another wedding">
+												<img th:src="@{/img/gallery/thumbnail/another-wedding.jpg}" class="rounded img-thumbnail" alt="Another wedding">
 											</a>
 											<div class="caption">
 												<h3>Kerilynn's Wedding</h3>
@@ -851,10 +840,10 @@
 									<div class="col-sm-6 col-md-4">
 										<div class="thumbnail">
 											<a class="lightbox" th:href="@{/img/gallery/proposal.jpg}">
-												<img th:src="@{/img/gallery/proposal.jpg}" class="rounded img-thumbnail" alt="Proposal">
+												<img th:src="@{/img/gallery/thumbnail/proposal.jpg}" class="rounded img-thumbnail" alt="Proposal">
 											</a>
 											<div class="caption">
-												<h3>THe Proposal</h3>
+												<h3>The Proposal</h3>
 												<p>Jonathan proposed to Ashley on a balcony near Magic Kingdom just minutes before the fireworks. Her sister was able to capture the moment :)</p>
 											</div>
 										</div>
@@ -862,7 +851,7 @@
 									<div class="col-sm-6 col-md-4">
 										<div class="thumbnail">
 											<a class="lightbox" th:href="@{/img/gallery/blue-man-group.jpg}">
-												<img th:src="@{/img/gallery/blue-man-group.jpg}" class="rounded img-thumbnail" alt="Blue Man Group">
+												<img th:src="@{/img/gallery/thumbnail/blue-man-group.jpg}" class="rounded img-thumbnail" alt="Blue Man Group">
 											</a>
 											<div class="caption">
 												<h3>Blue Man Group</h3>
@@ -873,7 +862,7 @@
 									<div class="col-sm-6 col-md-4">
 										<div class="thumbnail">
 											<a class="lightbox" th:href="@{/img/gallery/disney-with-robin.jpg}">
-												<img th:src="@{/img/gallery/disney-with-robin.jpg}" class="rounded img-thumbnail" alt="Disney with the White family">
+												<img th:src="@{/img/gallery/thumbnail/disney-with-robin.jpg}" class="rounded img-thumbnail" alt="Disney with the White family">
 											</a>
 											<div class="caption">
 												<h3>DIsney with the Whites</h3>
@@ -884,7 +873,7 @@
 									<div class="col-sm-6 col-md-4">
 										<div class="thumbnail">
 											<a class="lightbox" th:href="@{/img/gallery/disney-with-fiona.jpg}">
-												<img th:src="@{/img/gallery/disney-with-fiona.jpg}" class="rounded img-thumbnail" alt="Disney with Fiona">
+												<img th:src="@{/img/gallery/thumbnail/disney-with-fiona.jpg}" class="rounded img-thumbnail" alt="Disney with Fiona">
 											</a>
 											<div class="caption">
 												<h3>Fiona's Princess Experience</h3>
