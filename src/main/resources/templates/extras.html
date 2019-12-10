@@ -22,7 +22,7 @@
 						<div class="card-body text-left">
 							<h3 class="card-title">Caribe Royale</h3>
 							<hr />
-							<img th:src="@{/img/accomodations/caribe-royale.jpg}" class="card-img-top" alt="Caribe Royale">
+							<span id="caribe-royale-image"><!--/* Image added by JavaScript */--></span>
 							<p class="card-text mt-3">
 								Staying at Caribe Royale is a great option because it is the location of the reception.
 								The all-suite resort offers residential-style accommodations, including villas.
@@ -52,7 +52,7 @@
 						<div class="card-body text-left">
 							<h3 class="card-title">Buena Vista Suites</h3>
 							<hr />
-							<img th:src="@{/img/accomodations/buena-vista-suites.jpg}" class="card-img-top" alt="Buena Vista Suites">
+							<span id="buena-vista-suites-image"><!--/* Image added by JavaScript */--></span>
 							<p class="card-text mt-3">
 								Staying at Buena Vista Suites is another great option because it is in the same parking lot as the reception venue (Caribe Royale), but it is a less expensive option.
 								With Buena Vista Suites, a complimentary breakfast is included when you book your room.
@@ -110,8 +110,8 @@
 										</h2>
 									</div>
 									<div id="disney-collapse" class="collapse" aria-labelledby="disney-header" data-parent="#things-to-do-accordion">
-										<div class="card-body text-left">
-											<img th:src="@{/img/things-to-do/disney-world.jpg}" class="rounded img-thumbnail" alt="Cinderella's Castle at Magic Kingdom" />
+										<div id="disney" class="card-body text-left">
+											<!--/* Image added by JavaScript */-->
 											<p class="pt-3">
 												<a href="https://disneyworld.disney.go.com" target="_blank">Disney World</a> offers 4 theme parks and 2 water parks. In addition to the parks Disney Springs is an outdoor shopping, dining, and entertainment complex
 												with a lot to do for both adults and kids.
@@ -151,8 +151,8 @@
 										</h2>
 									</div>
 									<div id="void-collapse" class="collapse" aria-labelledby="void-header" data-parent="#things-to-do-accordion">
-										<div class="card-body text-left">
-											<img th:src="@{/img/things-to-do/the-void.jpg}" class="rounded img-thumbnail" alt="The VOID at Disney Springs" />
+										<div id="void" class="card-body text-left">
+											<!--/* Image added by JavaScript */-->
 											<p class="pt-3">
 												<a href="https://www.thevoid.com" target="_blank">The VOID</a> is a virtual reality (VR) experience at Disney Springs. It's free to park and get into Disney Springs, but
 												the experience costs money. There are two experiences available at the VOID; Star Wars and Ralph Breaks VR. The VOID allows you to travel into your favorite film, be
@@ -174,8 +174,8 @@
 										</h2>
 									</div>
 									<div id="hoop-dee-doo-collapse" class="collapse" aria-labelledby="hoop-dee-doo-header" data-parent="#things-to-do-accordion">
-										<div class="card-body text-left">
-											<img th:src="@{/img/things-to-do/hoop-dee-doo.jpg}" class="rounded img-thumbnail" alt="Hoop Dee Doo" />
+										<div id="hoop-dee-doo" class="card-body text-left">
+											<!--/* Image added by JavaScript */-->
 											<p class="pt-3">
 												<a href="https://disneyworld.disney.go.com/dining/cabins-at-fort-wilderness-resort/hoop-dee-doo-musical-revue" target="_blank">Hoop-Dee-Doo Musical Revue</a>
 												is a family friendly dinner show attraction in Disney's Fort Wilderness Resort. It's described as a hilarious, high-spirited hootenanny the whole family will enjoy,
@@ -196,8 +196,8 @@
 										</h2>
 									</div>
 									<div id="universal-collapse" class="collapse" aria-labelledby="universal-header" data-parent="#things-to-do-accordion">
-										<div class="card-body text-left">
-											<img th:src="@{/img/things-to-do/universal.jpg}" class="rounded img-thumbnail" alt="Universal Studios" />
+										<div id="universal" class="card-body text-left">
+											<!--/* Image added by JavaScript */-->
 											<p class="pt-3">
 												<a href="https://www.universalorlando.com/web/en/us" target="_blank">Universal Studios and Islands of adventure</a> are two theme parks that are right next to each
 												other in the heart of Orlando. They both feature a number of rides, roller coasters, and shows. They both feature a section of The Wizarding World of Harry Potter.
@@ -224,8 +224,8 @@
 										</h2>
 									</div>
 									<div id="seaworld-collapse" class="collapse" aria-labelledby="seaworld-header" data-parent="#things-to-do-accordion">
-										<div class="card-body text-left">
-											<img th:src="@{/img/things-to-do/seaworld.jpg}" class="rounded img-thumbnail" alt="Seaworld" />
+										<div id="seaworld" class="card-body text-left">
+											<!--/* Image added by JavaScript */-->
 											<p class="pt-3">
 												<a href="https://seaworld.com/orlando" target="_blank">Seaworld</a> is another one of Orlando's unique theme parks. They offer a number of exciting roller
 												coasters and shows along with an unmatched display of marine life. The famous Shamu show is a must see at where the killer whale shows off it's moves in a 
@@ -246,8 +246,8 @@
 										</h2>
 									</div>
 									<div id="discovery-cove-collapse" class="collapse" aria-labelledby="discovery-cove-header" data-parent="#things-to-do-accordion">
-										<div class="card-body text-left">
-											<img th:src="@{/img/things-to-do/discovery-cove.jpg}" class="rounded img-thumbnail" alt="Discovery Cove" />
+										<div id="discovery-cove" class="card-body text-left">
+											<!--/* Image added by JavaScript */-->
 											<p class="pt-3">
 												<a href="https://discoverycove.com/orlando" target="_blank">Discovery Cove</a> is the sister theme park to Seaworld. It is the only theme park that allows it's
 												guests to swim with the dolphins. Discovery cove is an exclusive park. Admission is limited to keep the crowds down, but you are sure to have a blast with the
@@ -268,8 +268,8 @@
 										</h2>
 									</div>
 									<div id="winter-park-boat-tour-collapse" class="collapse" aria-labelledby="winter-park-boat-tour-header" data-parent="#things-to-do-accordion">
-										<div class="card-body text-left">
-											<img th:src="@{/img/things-to-do/winter-park-boat-tour.jpg}" class="rounded img-thumbnail" alt="Winter Park Boat Tour" />
+										<div id="winter-park-boat-tour" class="card-body text-left">
+											<!--/* Image added by JavaScript */-->
 											<p class="pt-3">
 												<a href="https://www.scenicboattours.com" target="_blank">The Winter Park boat tour</a> is a scenic boat tour around the lakes of Winter Park. Ashley and Jon
 												recently purchased a house in Winter Park where they plan to live after they're married. If you want to check out their hometown, drop by for the peaceful
@@ -290,8 +290,8 @@
 										</h2>
 									</div>
 									<div id="daytona-beach-collapse" class="collapse" aria-labelledby="daytona-beach-header" data-parent="#things-to-do-accordion">
-										<div class="card-body text-left">
-											<img th:src="@{/img/things-to-do/daytona-beach.jpg}" class="rounded img-thumbnail" alt="Daytona Beach" />
+										<div id="daytona-beach" class="card-body text-left">
+											<!--/* Image added by JavaScript */-->
 											<p class="pt-3">
 												<a href="https://www.daytonabeach.com" target="_blank">Daytona Beach</a> is where Jonathan grew up. It was once known as the world's most famous beach.
 												Daytona is one of the only beaches you can drive your car on. It's a little drive from the resort, but it's well worth the trip. If you want to get a feel
@@ -312,8 +312,8 @@
 										</h2>
 									</div>
 									<div id="cocoa-beach-collapse" class="collapse" aria-labelledby="cocoa-beach-header" data-parent="#things-to-do-accordion">
-										<div class="card-body text-left">
-											<img th:src="@{/img/things-to-do/cocoa-beach.jpg}" class="rounded img-thumbnail" alt="Cocoa Beach" />
+										<div id="cocoa-beach" class="card-body text-left">
+											<!--/* Image added by JavaScript */-->
 											<p class="pt-3">
 												<a href="http://www.cocoabeach.com" target="_blank">Cocoa Beach</a> is a closer beach option than Daytona. It puts you next to the famous Port Canaveral
 												where cruise ships come and go. It's also a great stop along the way to Kennedy Space Center where you can take a tour and see some space shuttles.
@@ -333,8 +333,8 @@
 										</h2>
 									</div>
 									<div id="ponce-inlet-lighthouse-collapse" class="collapse" aria-labelledby="ponce-inlet-lighthouse-header" data-parent="#things-to-do-accordion">
-										<div class="card-body text-left">
-											<img th:src="@{/img/things-to-do/ponce-inlet-lighthouse.jpg}" class="rounded img-thumbnail" alt="Ponce Inlet Lighthouse" />
+										<div id="ponce-inlet-lighthouse" class="card-body text-left">
+											<!--/* Image added by JavaScript */-->
 											<p class="pt-3">
 												<a href="https://ponceinlet.org" target="_blank">Ponce Inlet Lighthouse</a> is the tallest lighthouse in the state and one of the tallest in the United States.
 												The lighthouse became a National Historic Landmark in 1998. Again, it's a bit of a drive from the resort, but it's a sight you don't get to see very often.
@@ -355,8 +355,8 @@
 										</h2>
 									</div>
 									<div id="orlando-city-soccer-collapse" class="collapse" aria-labelledby="orlando-city-soccer-header" data-parent="#things-to-do-accordion">
-										<div class="card-body text-left">
-											<img th:src="@{/img/things-to-do/orlando-city-soccer.jpg}" class="rounded img-thumbnail" alt="Orlando City Soccer" />
+										<div id="orlando-city-soccer" class="card-body text-left">
+											<!--/* Image added by JavaScript */-->
 											<p class="pt-3">
 												<a href="https://www.orlandocitysc.com" target="_blank">Orlando City Soccer</a> is Orlando's MLS soccer team. Come catch a game while your in town if
 												sporting events is what you're into. Ashley and Jonathan enjoyed a nice Orlando City game for their second date. It truly was a day to remember.
@@ -376,8 +376,8 @@
 										</h2>
 									</div>
 									<div id="holy-land-experience-collapse" class="collapse" aria-labelledby="holy-land-experience-header" data-parent="#things-to-do-accordion">
-										<div class="card-body text-left">
-											<img th:src="@{/img/things-to-do/holy-land-experience.jpg}" class="rounded img-thumbnail" alt="Holy Land Experience" />
+										<div id="holy-land-experience" class="card-body text-left">
+											<!--/* Image added by JavaScript */-->
 											<p class="pt-3">
 												<a href="https://holylandexperience.com" target="_blank">Holy Land Experience</a> is a different kind of theme park. It is registered as a Christian-based
 												theme park a non-profit corporation. The theme park conducts weekly church services and bible studies for the general public. They recreate the architecture
@@ -398,8 +398,8 @@
 										</h2>
 									</div>
 									<div id="legoland-collapse" class="collapse" aria-labelledby="legoland-header" data-parent="#things-to-do-accordion">
-										<div class="card-body text-left">
-											<img th:src="@{/img/things-to-do/legoland.jpg}" class="rounded img-thumbnail" alt="Legoland" />
+										<div id="legoland" class="card-body text-left">
+											<!--/* Image added by JavaScript */-->
 											<p class="pt-3">
 												<a href="https://www.legoland.com/florida" target="_blank">Legoland</a> is marketed to families with younger children (11 and under), and although the
 												attractions include a number of roller coasters, the roller coasters are not as numerous or as extreme as those in other parks, and there is a greater
@@ -422,8 +422,8 @@
 										</h2>
 									</div>
 									<div id="orlando-escape-game-collapse" class="collapse" aria-labelledby="orlando-escape-game-header" data-parent="#things-to-do-accordion">
-										<div class="card-body text-left">
-											<img th:src="@{/img/things-to-do/orlando-escape-game.jpg}" class="rounded img-thumbnail" alt="Orlando Escape Game" />
+										<div id="orlando-escape-game" class="card-body text-left">
+											<!--/* Image added by JavaScript */-->
 											<p class="pt-3">
 												<a href="https://theescapegame.com/orlando" target="_blank">Orlando Escape Game</a> is a thrilling experience where you are put into a room full of
 												puzzles, riddles, and other mysteries. Each escape game has a theme such as prison break, gold rush, and the heist. You are given an hour to solve a
@@ -445,8 +445,8 @@
 										</h2>
 									</div>
 									<div id="black-hammock-airboat-collapse" class="collapse" aria-labelledby="black-hammock-airboat-header" data-parent="#things-to-do-accordion">
-										<div class="card-body text-left">
-											<img th:src="@{/img/things-to-do/black-hammock-airboat.jpg}" class="rounded img-thumbnail" alt="Black Hammock Airboat" />
+										<div id="black-hammock-airboat" class="card-body text-left">
+											<!--/* Image added by JavaScript */-->
 											<p class="pt-3">
 												<a href="http://www.blackhammockairboatrides.com" target="_blank">Black Hammock Airboat</a> is an ideal place to visit for those interested in exploring
 												all of the unique nature that exists in Central Florida! On the airboat ride you get a chance to see the popular Florida aligators. Take a relaxing
@@ -467,8 +467,8 @@
 										</h2>
 									</div>
 									<div id="margaritaville-collapse" class="collapse" aria-labelledby="margaritaville-header" data-parent="#things-to-do-accordion">
-										<div class="card-body text-left">
-											<img th:src="@{/img/things-to-do/margaritaville.jpg}" class="rounded img-thumbnail" alt="Margaritaville" />
+										<div id="margaritaville" class="card-body text-left">
+											<!--/* Image added by JavaScript */-->
 											<p class="pt-3">
 												<a href="https://www.margaritavilleresortorlando.com" target="_blank">Margaritaville</a> is your little piece of paradise, your private oasis, where luxury
 												and heart-pounding fun meet — beautifully. You’ll find lush grounds dotted with vacation cottages, a 184-room luxury hotel and cozy timeshares, all
@@ -490,8 +490,8 @@
 										</h2>
 									</div>
 									<div id="celebration-town-center-collapse" class="collapse" aria-labelledby="celebration-town-center-header" data-parent="#things-to-do-accordion">
-										<div class="card-body text-left">
-											<img th:src="@{/img/things-to-do/celebration.jpg}" class="rounded img-thumbnail" alt="Celebration Town Center" />
+										<div id="celebration" class="card-body text-left">
+											<!--/* Image added by JavaScript */-->
 											<p class="pt-3">
 												<a href="https://celebrationtowncenter.com/" target="_blank">Celebration Town Center</a> is the finest selection of traditional shops and boutiques with
 												something for everyone in the family, as well a business district, all modeled after those found in small American towns. Retail shops, restaurants, a town
@@ -597,287 +597,12 @@
 								<div class="row">
 									<div class="col-sm-6 col-md-4">
 										<div class="thumbnail">
-											<a class="lightbox" href="https://clients.sophiasartphotography.com/ashley-and-jonathan-engagement" target="_blank">
-												<img th:src="@{/img/gallery/thumbnail/engagement-photo.jpg}" class="rounded img-thumbnail" alt="Engagement Photos">
+											<a id="engagement-photos" class="lightbox" href="https://clients.sophiasartphotography.com/ashley-and-jonathan-engagement" target="_blank">
+												<!--/* Image added by JavaScript */-->
 											</a>
 											<div class="caption">
 												<h3>Engagement Photos</h3>
 												<p>Check out the album of engagement photos we took at Disney's Boardwalk.</p>
-											</div>
-										</div>
-									</div>
-									<div class="col-sm-6 col-md-4">
-										<div class="thumbnail">
-											<a class="lightbox" th:href="@{/img/gallery/angelas-christmas-party.jpg}">
-												<img th:src="@{/img/gallery/thumbnail/angelas-christmas-party.jpg}" class="rounded img-thumbnail" alt="Photo Album from Regular Life">
-											</a>
-											<div class="caption">
-												<h3>Christmas Party</h3>
-												<p>Having a great time at Angela Kruck's Christmas party.</p>
-											</div>
-										</div>
-									</div>
-									<div class="col-sm-6 col-md-4">
-										<div class="thumbnail">
-											<a class="lightbox" th:href="@{/img/gallery/beautiful-view.jpg}">
-												<img th:src="@{/img/gallery/thumbnail/beautiful-view.jpg}" class="rounded img-thumbnail" alt="Beautiful view">
-											</a>
-											<div class="caption">
-												<h3>St. Thomas</h3>
-												<p>Ashley and Jonathan taking in a beautiful view in St. Thomas. They went there on Ashley's grandfather's 80th birthday cruise.</p>
-											</div>
-										</div>
-									</div>
-									<div class="col-sm-6 col-md-4">
-										<div class="thumbnail">
-											<a class="lightbox" th:href="@{/img/gallery/engaged.jpg}">
-												<img th:src="@{/img/gallery/thumbnail/engaged.jpg}" class="rounded img-thumbnail" alt="Engaged">
-											</a>
-											<div class="caption">
-												<h3>Engagement Fireworks</h3>
-												<p>Fireworks soared over Cinderella's Castle at Magic Kingdom just minutes after Jonathan proposed to Ashley.</p>
-											</div>
-										</div>
-									</div>
-									<div class="col-sm-6 col-md-4">
-										<div class="thumbnail">
-											<a class="lightbox" th:href="@{/img/gallery/ring.jpg}">
-												<img th:src="@{/img/gallery/thumbnail/ring.jpg}" class="rounded img-thumbnail" alt="Ring">
-											</a>
-											<div class="caption">
-												<h3>The Ring</h3>
-												<p>Ashley shows off her ring during the fireworks.</p>
-											</div>
-										</div>
-									</div>
-									<div class="col-sm-6 col-md-4">
-										<div class="thumbnail">
-											<a class="lightbox" th:href="@{/img/gallery/epcot.jpg}">
-												<img th:src="@{/img/gallery/thumbnail/epcot.jpg}" class="rounded img-thumbnail" alt="Epcot">
-											</a>
-											<div class="caption">
-												<h3>Epcot</h3>
-												<p>Ashley and Jon's first trip to Disney together. They stopped in Paris at the World Showcase for a quick picture.</p>
-											</div>
-										</div>
-									</div>
-									<div class="col-sm-6 col-md-4">
-										<div class="thumbnail">
-											<a class="lightbox" th:href="@{/img/gallery/great-inflatable-race.jpg}">
-												<img th:src="@{/img/gallery/thumbnail/great-inflatable-race.jpg}" class="rounded img-thumbnail" alt="Great Inflatable Race">
-											</a>
-											<div class="caption">
-												<h3>The Great Inflatable Race</h3>
-												<p>Ashley and Jon ran in a fun 5K filled with inflatable obsticles that were fun for everyone.</p>
-											</div>
-										</div>
-									</div>
-									<div class="col-sm-6 col-md-4">
-										<div class="thumbnail">
-											<a class="lightbox" th:href="@{/img/gallery/big-thunder-mountain.jpg}">
-												<img th:src="@{/img/gallery/thumbnail/big-thunder-mountain.jpg}" class="rounded img-thumbnail" alt="Big Thunder Mountain">
-											</a>
-											<div class="caption">
-												<h3>Fiona's Disney Trip</h3>
-												<p>Fiona rode Big Thunder Mountain for the first time with Ashley. She loved it!</p>
-											</div>
-										</div>
-									</div>
-									<div class="col-sm-6 col-md-4">
-										<div class="thumbnail">
-											<a class="lightbox" th:href="@{/img/gallery/engagement-toast.jpg}">
-												<img th:src="@{/img/gallery/thumbnail/engagement-toast.jpg}" class="rounded img-thumbnail" alt="Engagement toast">
-											</a>
-											<div class="caption">
-												<h3>Engagement Toast</h3>
-												<p>An estute bar tender realized something big just happened and offered Ashley and Jon some champagne to celebrate their engagement.</p>
-											</div>
-										</div>
-									</div>
-									<div class="col-sm-6 col-md-4">
-										<div class="thumbnail">
-											<a class="lightbox" th:href="@{/img/gallery/engagement-seeing-family.jpg}">
-												<img th:src="@{/img/gallery/thumbnail/engagement-seeing-family.jpg}" class="rounded img-thumbnail" alt="Engagement seeing family">
-											</a>
-											<div class="caption">
-												<h3>Ugly Cry</h3>
-												<p>What Ashley describes as her ugly cry after seeing her parents and grandparents were there to celebrate the engagement.</p>
-											</div>
-										</div>
-									</div>
-									<div class="col-sm-6 col-md-4">
-										<div class="thumbnail">
-											<a class="lightbox" th:href="@{/img/gallery/engagement-family-photo.jpg}">
-												<img th:src="@{/img/gallery/thumbnail/engagement-family-photo.jpg}" class="rounded img-thumbnail" alt="Engagement family photo">
-											</a>
-											<div class="caption">
-												<h3>Family Engagement Photo</h3>
-												<p>A photo with the family that could make it to the engagement celebration.</p>
-											</div>
-										</div>
-									</div>
-									<div class="col-sm-6 col-md-4">
-										<div class="thumbnail">
-											<a class="lightbox" th:href="@{/img/gallery/evansville-with-alex.jpg}">
-												<img th:src="@{/img/gallery/thumbnail/evansville-with-alex.jpg}" class="rounded img-thumbnail" alt="University of Evansville with Alex">
-											</a>
-											<div class="caption">
-												<h3>Evansville</h3>
-												<p>Alex, Tom, Ashley, and Jon during Jon's first visit to Ashley's college, University of Evansville.</p>
-											</div>
-										</div>
-									</div>
-									<div class="col-sm-6 col-md-4">
-										<div class="thumbnail">
-											<a class="lightbox" th:href="@{/img/gallery/magic-kingdom.jpg}">
-												<img th:src="@{/img/gallery/thumbnail/magic-kingdom.jpg}" class="rounded img-thumbnail" alt="Magic Kingdom">
-											</a>
-											<div class="caption">
-												<h3>Magic Kingdom</h3>
-												<p>Ashley and Jon share a romantic moment in front of the beautifully lit Cinderella's Castle during Christmas time.</p>
-											</div>
-										</div>
-									</div>
-									<div class="col-sm-6 col-md-4">
-										<div class="thumbnail">
-											<a class="lightbox" th:href="@{/img/gallery/visit-with-steph.jpg}">
-												<img th:src="@{/img/gallery/thumbnail/visit-with-steph.jpg}" class="rounded img-thumbnail" alt="Visit With Steph">
-											</a>
-											<div class="caption">
-												<h3>Visit from Stephanie</h3>
-												<p>Ashley's cousin Stephanie came to Orlando for a visit. They went bar hopping!</p>
-											</div>
-										</div>
-									</div>
-									<div class="col-sm-6 col-md-4">
-										<div class="thumbnail">
-											<a class="lightbox" th:href="@{/img/gallery/food-and-wine.jpg}">
-												<img th:src="@{/img/gallery/thumbnail/food-and-wine.jpg}" class="rounded img-thumbnail" alt="Food and Wine 2018">
-											</a>
-											<div class="caption">
-												<h3>Food and Wine Festival</h3>
-												<p>Ashley's family came to town for the Food and Wine Festival at Epcot.</p>
-											</div>
-										</div>
-									</div>
-									<div class="col-sm-6 col-md-4">
-										<div class="thumbnail">
-											<a class="lightbox" th:href="@{/img/gallery/ibr-cruise.jpg}">
-												<img th:src="@{/img/gallery/thumbnail/ibr-cruise.jpg}" class="rounded img-thumbnail" alt="IBR cruise 2018">
-											</a>
-											<div class="caption">
-												<h3>IBR cruise</h3>
-												<p>Jon and Ashley enjoyed the day in the Bahamas with Jason and Alexis during the IBR cruise.</p>
-											</div>
-										</div>
-									</div>
-									<div class="col-sm-6 col-md-4">
-										<div class="thumbnail">
-											<a class="lightbox" th:href="@{/img/gallery/ibr-cruise-2.jpg}">
-												<img th:src="@{/img/gallery/thumbnail/ibr-cruise-2.jpg}" class="rounded img-thumbnail" alt="IBR cruise 2018 outside ship">
-											</a>
-											<div class="caption">
-												<h3>Chillin' by the ship</h3>
-												<p>Ashley and Jon outside the cruise ship in the Bahamas during the IBR cruise.</p>
-											</div>
-										</div>
-									</div>
-									<div class="col-sm-6 col-md-4">
-										<div class="thumbnail">
-											<a class="lightbox" th:href="@{/img/gallery/ibr-cruise-formal-night.jpg}">
-												<img th:src="@{/img/gallery/thumbnail/ibr-cruise-formal-night.jpg}" class="rounded img-thumbnail" alt="IBR cruise 2018 formal night">
-											</a>
-											<div class="caption">
-												<h3>Formal Night</h3>
-												<p>Ashley and Jon got all dressed up for the formal night on the IBR cruise.</p>
-											</div>
-										</div>
-									</div>
-									<div class="col-sm-6 col-md-4">
-										<div class="thumbnail">
-											<a class="lightbox" th:href="@{/img/gallery/ibr-cruise-formal-night-formal-picture.jpg}">
-												<img th:src="@{/img/gallery/thumbnail/ibr-cruise-formal-night-formal-picture.jpg}" class="rounded img-thumbnail" alt="IBR cruise 2018 professional picture">
-											</a>
-											<div class="caption">
-												<h3>Professional Photo</h3>
-												<p>Ashley and Jon took a professional photo on the cruise.</p>
-											</div>
-										</div>
-									</div>
-									<div class="col-sm-6 col-md-4">
-										<div class="thumbnail">
-											<a class="lightbox" th:href="@{/img/gallery/visit-with-texas-family.jpg}">
-												<img th:src="@{/img/gallery/thumbnail/visit-with-texas-family.jpg}" class="rounded img-thumbnail" alt="Visit with Texas family">
-											</a>
-											<div class="caption">
-												<h3>Cousins at Disney</h3>
-												<p>Ashley's cousins came for a visit. They went do Magic Kingdom to meet all the princesses.</p>
-											</div>
-										</div>
-									</div>
-									<div class="col-sm-6 col-md-4">
-										<div class="thumbnail">
-											<a class="lightbox" th:href="@{/img/gallery/fun-date.jpg}">
-												<img th:src="@{/img/gallery/thumbnail/fun-date.jpg}" class="rounded img-thumbnail" alt="Fun date">
-											</a>
-											<div class="caption">
-												<h3>Voodoo Doughnuts</h3>
-												<p>Jonathan took Ashley to Voodoo Doughnuts in City Walk after they rode the Orlando Eye. It was one of their first dates.</p>
-											</div>
-										</div>
-									</div>
-									<div class="col-sm-6 col-md-4">
-										<div class="thumbnail">
-											<a class="lightbox" th:href="@{/img/gallery/another-wedding.jpg}">
-												<img th:src="@{/img/gallery/thumbnail/another-wedding.jpg}" class="rounded img-thumbnail" alt="Another wedding">
-											</a>
-											<div class="caption">
-												<h3>Kerilynn's Wedding</h3>
-												<p>Ashley's God-little from her sorority got married!</p>
-											</div>
-										</div>
-									</div>
-									<div class="col-sm-6 col-md-4">
-										<div class="thumbnail">
-											<a class="lightbox" th:href="@{/img/gallery/proposal.jpg}">
-												<img th:src="@{/img/gallery/thumbnail/proposal.jpg}" class="rounded img-thumbnail" alt="Proposal">
-											</a>
-											<div class="caption">
-												<h3>The Proposal</h3>
-												<p>Jonathan proposed to Ashley on a balcony near Magic Kingdom just minutes before the fireworks. Her sister was able to capture the moment :)</p>
-											</div>
-										</div>
-									</div>
-									<div class="col-sm-6 col-md-4">
-										<div class="thumbnail">
-											<a class="lightbox" th:href="@{/img/gallery/blue-man-group.jpg}">
-												<img th:src="@{/img/gallery/thumbnail/blue-man-group.jpg}" class="rounded img-thumbnail" alt="Blue Man Group">
-											</a>
-											<div class="caption">
-												<h3>Blue Man Group</h3>
-												<p>Jon took Ashley to the Blue Man Group for her birthday.</p>
-											</div>
-										</div>
-									</div>
-									<div class="col-sm-6 col-md-4">
-										<div class="thumbnail">
-											<a class="lightbox" th:href="@{/img/gallery/disney-with-robin.jpg}">
-												<img th:src="@{/img/gallery/thumbnail/disney-with-robin.jpg}" class="rounded img-thumbnail" alt="Disney with the White family">
-											</a>
-											<div class="caption">
-												<h3>DIsney with the Whites</h3>
-												<p>Robin and Murray brought the kids down for a fun filled Disney visit. As you can see, Hudson was pooped by the end of the day.</p>
-											</div>
-										</div>
-									</div>
-									<div class="col-sm-6 col-md-4">
-										<div class="thumbnail">
-											<a class="lightbox" th:href="@{/img/gallery/disney-with-fiona.jpg}">
-												<img th:src="@{/img/gallery/thumbnail/disney-with-fiona.jpg}" class="rounded img-thumbnail" alt="Disney with Fiona">
-											</a>
-											<div class="caption">
-												<h3>Fiona's Princess Experience</h3>
-												<p>Aunt Do joined for Fiona's Disney adventure. Fiona was awe-struck by the princesses.</p>
 											</div>
 										</div>
 									</div>

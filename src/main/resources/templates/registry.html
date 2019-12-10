@@ -3,6 +3,9 @@
 	<head>
 		<link media="all" rel="stylesheet" th:href="@{/css/registry.css}" />
 	</head>
+	<section layout:fragment="additionalScripts">
+		<script th:src="@{/js/registry.js}"></script>
+	</section>
 	<div layout:fragment="content" th:inline="text">
 		<section id="registry">
 			<div class="row">
@@ -14,15 +17,15 @@
 				<div class="col-12">
 					<div class="card-deck mx-auto">
 						<!-- Zola registry -->
-						<div class="card mx-auto">
-							<img th:src="@{/img/registry/zola-scaled.png}" class="card-img-top p-5" alt="Zola">
+						<div id="zola" class="card mx-auto">
+							<!--/* Image added by JavaScript */-->
 							<div class="card-body">
 								<a href="https://www.zola.com/registry/jonathanandashleyfebruary29" target="_blank" class="btn btn-primary">Shop Registry</a>
 							</div>
 						</div>
 						<!-- Amazon registry -->
-						<div class="card mx-auto">
-							<img th:src="@{/img/registry/amazon-scaled.png}" class="card-img-top p-5" alt="Amazon">
+						<div id="amazon" class="card mx-auto">
+							<!--/* Image added by JavaScript */-->
 							<div class="card-body">
 								<a href="https://www.amazon.com/wedding/registry/XFNL8K4QYPCE?ref=wr_search_page_result_1" target="_blank" class="btn btn-primary">Shop Registry</a>
 							</div>
@@ -30,15 +33,15 @@
 					</div>
 					<div class="card-deck mx-auto mt-4">
 						<!-- Williams Sonoma registry -->
-						<div class="card mx-auto">
-							<img th:src="@{/img/registry/williams-sonoma-scaled.png}" class="card-img-top p-5" alt="Williams Sonoma">
+						<div id="williams-sonoma" class="card mx-auto">
+							<!--/* Image added by JavaScript */-->
 							<div class="card-body">
 								<a href="https://www.williams-sonoma.com/registry/m6xwsz57pw/registry-list.html" target="_blank" class="btn btn-primary">Shop Registry</a>
 							</div>
 						</div>
 						<!-- Pottery Barn registry -->
-						<div class="card mx-auto">
-							<img th:src="@{/img/registry/pottery-barn-scaled.png}" class="card-img-top p-5" alt="Pottery Barn">
+						<div id="pottery-barn" class="card mx-auto">
+							<!--/* Image added by JavaScript */-->
 							<div class="card-body">
 								<a href="https://www.potterybarn.com/registry/m6xwsz57pw/registry-list.html" target="_blank" class="btn btn-primary">Shop Registry</a>
 							</div>
