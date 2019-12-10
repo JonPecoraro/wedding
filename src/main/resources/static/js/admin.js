@@ -1,8 +1,11 @@
 $(function() {
-	$('.display').DataTable();
+	$('.display').DataTable({
+		'order': [[ 0, 'desc' ]]
+    });
 	
 	// Guest admin page functions	
-	$('.guest-link').on('click', function() {
+	$('.guest-link').on('click', function(e) {
+		e.preventDefault();
 		var $this = $(this);
 		$('#updateGuestForm').attr('action', '/admin/edit-guest/' + $this.attr('id'));
 		$('#guestId').val($this.attr('id'));
@@ -34,6 +37,7 @@ $(function() {
 	
 	// Guestbook admin page function
 	$('.guestbook-entry-link').on('click', function() {
+		e.preventDefault();
 		var $this = $(this);
 		$('#updateEntryForm').attr('action', '/admin/edit-guestbook-entry/' + $this.attr('id'));
 		$('#entryId').val($this.attr('id'));

@@ -1,5 +1,9 @@
 package com.wedding.controller;
 
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -10,6 +14,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import com.google.common.base.Strings;
 import com.wedding.dao.GuestbookRepository;
 import com.wedding.model.Guestbook;
+import com.wedding.util.S3Util;
 
 @Controller
 @RequestMapping(value = {"/extras"}, produces = "application/json")
@@ -39,6 +44,18 @@ public class ExtrasController {
 		}
 		
 		return null;
+	}
+	
+	@GetMapping("/getPhotoGallery")
+	@ResponseBody
+	public Map<String, String> getPhotoGallery() {
+		Map<String, String> imageUrls = new HashMap<>();
+		List<String> bucketList = S3Util.getS3BucketObjectList("img/gallery/thumbnail");
+		for (String thumbnailKey : bucketList) {
+			String imageKey = thumbnailKey.replace("/thumbnail", "");
+			imageUrls.put(S3Util.getS3ImageLink(thumbnailKey), S3Util.getS3ImageLink(imageKey));
+		}
+		return imageUrls;
 	}
 	
 	/**
