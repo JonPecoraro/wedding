@@ -4,7 +4,7 @@ $(function() {
     });
 	
 	// Guest admin page functions	
-	$('.guest-link').on('click', function(e) {
+	$(document).on('click', '.guest-link', function(e) {
 		e.preventDefault();
 		var $this = $(this);
 		$('#updateGuestForm').attr('action', '/admin/edit-guest/' + $this.attr('id'));
@@ -36,7 +36,7 @@ $(function() {
 	// End Guest admin page functions
 	
 	// Guestbook admin page function
-	$('.guestbook-entry-link').on('click', function() {
+	$(document).on('click', '.guestbook-entry-link', function() {
 		e.preventDefault();
 		var $this = $(this);
 		$('#updateEntryForm').attr('action', '/admin/edit-guestbook-entry/' + $this.attr('id'));
