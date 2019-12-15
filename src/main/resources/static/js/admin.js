@@ -36,7 +36,7 @@ $(function() {
 	// End Guest admin page functions
 	
 	// Guestbook admin page function
-	$(document).on('click', '.guestbook-entry-link', function() {
+	$(document).on('click', '.guestbook-entry-link', function(e) {
 		e.preventDefault();
 		var $this = $(this);
 		$('#updateEntryForm').attr('action', '/admin/edit-guestbook-entry/' + $this.attr('id'));
