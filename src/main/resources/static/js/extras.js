@@ -43,6 +43,7 @@ $(function() {
 	
 	common.getImageFromS3('accomodations/caribe-royale.jpg', $('#caribe-royale-image'), 'Caribe Royale', 'card-img-top');
 	common.getImageFromS3('accomodations/buena-vista-suites.jpg', $('#buena-vista-suites-image'), 'Buena Vista Suites', 'card-img-top');
+	common.getImageFromS3('accomodations/days-hotel.jpg', $('#days-hotel-image'), 'Days Hotel by Wyndham Celebration', 'card-img-top');
 	
 	common.getImageFromS3('gallery/engagement-photos/engagement-photo.jpg', $('#engagement-photos'), 'Engagement Photos', 'rounded img-thumbnail');
 	(function getPhotoGallery() {
