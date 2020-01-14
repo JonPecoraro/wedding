@@ -48,9 +48,10 @@ $(function() {
 		console.log(errorThrown);
 	});
 	
-	common.getImageFromS3('piggy-back-scaled.jpg', $('#engagement-photo'), 'Engagement photo');
-	common.getImageFromS3('corpus-christi.jpg', $('#corpus-christi'), 'Corpus Christi Catholic Church');
-	common.getImageFromS3('caribe-royale.jpg', $('#caribe-royale'), 'Caribe Royale');
+	common.getImageFromS3('piggy-back-scaled.jpg', $('#engagement-photo'), 'Engagement photo', 'img-fluid');
+	common.getImageFromS3('corpus-christi.jpg', $('#corpus-christi'), 'Corpus Christi Catholic Church', 'img-fluid');
+	common.getImageFromS3('caribe-royale.jpg', $('#caribe-royale'), 'Caribe Royale', 'img-fluid');
+	common.getImageFromS3('days-hotel-conference-center.jpg', $('#days-hotel'), 'Days Hotel by Wyndham Celebration - Conference Center', 'img-fluid');
 	common.getImageFromS3('animal-kingdom-scaled.jpg', $('#story-p1'), 'Animal Kingdom', 'float-left p-2', true);
 	common.getImageFromS3('silhouette-proposal.png', $('#story-p2'), 'Proposal Silhouette', 'float-left p-2', true);
 });
